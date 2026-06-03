@@ -174,7 +174,17 @@
         .section-title {
             text-align: center;
             font-size: 36px;
-            margin-bottom: 60px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            font-size: 16px;
             position: relative;
             z-index: 2;
         }
@@ -261,23 +271,68 @@
             margin-right: 5px;
         }
 
-        /* Services Section */
+        /* Services Grid Layout */
         .services-section {
             position: relative;
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 100px 20px;
-            text-align: center;
+            margin: 60px auto;
+            padding: 80px 20px;
         }
 
-        .services-placeholder {
+        .services-pitch {
+            background: rgba(255, 71, 87, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 50px;
+            font-size: 16px;
+            color: var(--text-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card {
             background: var(--bg-card);
-            border: 2px dashed rgba(255, 255, 255, 0.15);
-            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 40px 30px;
             border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+            border-color: rgba(255, 71, 87, 0.2);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-card h3 span {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .service-card p {
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 15px;
             position: relative;
             z-index: 2;
         }
@@ -371,8 +426,8 @@
                 Spider<span>Web</span>
             </a>
             <nav class="nav-links">
+                <a href="#services">Our Services</a>
                 <a href="#pricing">Pricing</a>
-                <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -388,14 +443,63 @@
         <a href="#contact" class="cta-button">Get Started Today</a>
     </section>
 
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <h2 class="section-title">Turnkey Digital Real Estate</h2>
+        <p class="section-subtitle">We don't just sell standard websites or blank domains. We build fully equipped digital properties that are ready to launch and drive customers to your business instantly.</p>
+
+        <!-- Dynamic Success Tip Hook -->
+        <div class="services-pitch">
+            <strong>💡 The SpiderWeb Advantage:</strong> Business owners don't just care about a domain name—they care about getting more customers. We don't just bring you a layout; we deliver fully built web infrastructures optimized to pull in fresh leads for your local niche from day one.
+        </div>
+
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <h3><span>1.</span> Ready-Made "Turnkey" Websites</h3>
+                <p>Instead of waiting around for setups, buy domain + site bundles tailored directly to your niche (e.g., industry-specific setups or premium affiliate content hubs) with functional structures and content pre-arranged.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <h3><span>2.</span> Branding & Identity Bundles</h3>
+                <p>Get a complete "business-in-a-box" launch pad centered around a highly brandable premium domain. Includes matching custom logos, curated visual guidelines, and secured, unified social media handles across core platforms.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <h3><span>3.</span> Rent-to-Own Web Leasing</h3>
+                <p>Skip massive upfront design overhead. We host and deploy the website on our platform for an accessible monthly payment. After a set period (12 to 24 months), the digital property and domain ownership transfer fully over to you.</p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <h3><span>4.</span> Rank-and-Rent Lead Generation</h3>
+                <p>We leverage geo-targeted domains optimized natively for localized searches. Once our high-ranking platforms begin capturing direct phone traffic and targeted digital leads, we route the operational volume straight to your company dashboard.</p>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-card">
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <h3><span>5.</span> Migration & Maintenance</h3>
+                <p>Seamless technical asset transitions. Take advantage of complete end-to-end support ecosystems, routine file backups, security updates, robust server hosting, and custom corporate email integrations via professional suites.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section class="pricing-section" id="pricing">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
 
         <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-subtitle">Choose an annual digital plan aligned directly with your preferred service tiers and branding needs.</p>
+        
         <div class="pricing-container">
-            
             <!-- Starter Plan -->
             <div class="price-card">
                 <div class="web-corner-tl" style="width:100px; height:100px;"></div>
@@ -427,19 +531,6 @@
                 </div>
                 <a href="#contact" class="cta-button">Choose Premium</a>
             </div>
-
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services-section" id="services">
-        <div class="web-corner-tl"></div>
-        <div class="web-corner-br"></div>
-
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-placeholder">
-            <p><strong style="color: var(--text-light);">[Features & Services Slot]</strong></p>
-            <p style="margin-top: 10px;">We will list your specific service breakdowns, hosting details, and custom features right here once you are ready!</p>
         </div>
     </section>
 
