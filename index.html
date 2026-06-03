@@ -10,10 +10,12 @@
             --primary: #1a1a1a;
             --accent: #ff4757;
             --accent-hover: #e0404e;
-            --bg-light: #f9f9f9;
+            --bg-light: #f4f4f4;
             --text-dark: #333333;
             --text-muted: #666666;
             --white: #ffffff;
+            --web-color: rgba(0, 0, 0, 0.06);
+            --web-color-light: rgba(255, 255, 255, 0.08);
         }
 
         /* Smooth Scrolling Enablement */
@@ -32,7 +34,44 @@
             color: var(--text-dark);
             background-color: var(--white);
             line-height: 1.6;
+            overflow-x: hidden;
         }
+
+        /* --- CSS SPIDER WEB BACKGROUNDS --- */
+        .web-corner-tl, .web-corner-br {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.8;
+        }
+
+        /* Top Left Web */
+        .web-corner-tl {
+            top: 0;
+            left: 0;
+            background: 
+                radial-gradient(circle at 0 0, transparent 20px, var(--web-color) 21px, transparent 22px, transparent 40px, var(--web-color) 41px, transparent 42px, transparent 60px, var(--web-color) 61px, transparent 62px, transparent 80px, var(--web-color) 81px, transparent 82px, transparent 100px, var(--web-color) 101px, transparent 102px),
+                linear-gradient(to bottom right, transparent 49%, var(--web-color) 50%, transparent 51%),
+                linear-gradient(15deg, transparent 49%, var(--web-color) 50%, transparent 51%),
+                linear-gradient(75deg, transparent 49%, var(--web-color) 50%, transparent 51%);
+        }
+
+        /* Bottom Right Web */
+        .web-corner-br {
+            bottom: 0;
+            right: 0;
+            background: 
+                radial-gradient(circle at 100% 100%, transparent 20px, var(--web-color) 21px, transparent 22px, transparent 40px, var(--web-color) 41px, transparent 42px, transparent 60px, var(--web-color) 61px, transparent 62px, transparent 80px, var(--web-color) 81px, transparent 82px, transparent 100px, var(--web-color) 101px, transparent 102px),
+                linear-gradient(to top left, transparent 49%, var(--web-color) 50%, transparent 51%),
+                linear-gradient(195deg, transparent 49%, var(--web-color) 50%, transparent 51%),
+                linear-gradient(255deg, transparent 49%, var(--web-color) 50%, transparent 51%);
+        }
+
+        /* Light Web Variant for Dark Backgrounds */
+        .contact-section .web-corner-tl { background: radial-gradient(circle at 0 0, transparent 20px, var(--web-color-light) 21px, transparent 22px, transparent 40px, var(--web-color-light) 41px, transparent 42px, transparent 60px, var(--web-color-light) 61px, transparent 62px, transparent 80px, var(--web-color-light) 81px, transparent 82px), linear-gradient(to bottom right, transparent 49%, var(--web-color-light) 50%, transparent 51%), linear-gradient(15deg, transparent 49%, var(--web-color-light) 50%, transparent 51%), linear-gradient(75deg, transparent 49%, var(--web-color-light) 50%, transparent 51%); }
+        .contact-section .web-corner-br { background: radial-gradient(circle at 100% 100%, transparent 20px, var(--web-color-light) 21px, transparent 22px, transparent 40px, var(--web-color-light) 41px, transparent 42px, transparent 60px, var(--web-color-light) 61px, transparent 62px, transparent 80px, var(--web-color-light) 81px, transparent 82px), linear-gradient(to top left, transparent 49%, var(--web-color-light) 50%, transparent 51%), linear-gradient(195deg, transparent 49%, var(--web-color-light) 50%, transparent 51%), linear-gradient(255deg, transparent 49%, var(--web-color-light) 50%, transparent 51%); }
 
         /* Navigation */
         header {
@@ -57,6 +96,9 @@
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .logo span {
@@ -77,9 +119,10 @@
 
         /* Hero Section */
         .hero {
+            position: relative;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 100px 20px;
+            padding: 120px 20px;
             text-align: center;
         }
 
@@ -88,6 +131,8 @@
             color: var(--primary);
             margin-bottom: 20px;
             line-height: 1.2;
+            position: relative;
+            z-index: 2;
         }
 
         .hero p {
@@ -95,6 +140,8 @@
             color: var(--text-muted);
             max-width: 700px;
             margin: 0 auto 30px auto;
+            position: relative;
+            z-index: 2;
         }
 
         .cta-button {
@@ -106,6 +153,8 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
         }
 
         .cta-button:hover {
@@ -116,6 +165,7 @@
 
         /* Pricing Section */
         .pricing-section {
+            position: relative;
             background-color: var(--bg-light);
             padding: 80px 20px;
         }
@@ -124,6 +174,8 @@
             text-align: center;
             font-size: 36px;
             margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
         }
 
         .pricing-container {
@@ -133,6 +185,8 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .price-card {
@@ -146,6 +200,8 @@
             flex-direction: column;
             justify-content: space-between;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .price-card:hover {
@@ -200,6 +256,7 @@
 
         /* Services Placeholder Section */
         .services-section {
+            position: relative;
             max-width: 1200px;
             margin: 0 auto;
             padding: 80px 20px;
@@ -213,10 +270,13 @@
             color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         /* Contact Section */
         .contact-section {
+            position: relative;
             background-color: var(--primary);
             color: var(--white);
             padding: 80px 20px;
@@ -225,6 +285,8 @@
 
         .contact-section h2 {
             margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
         }
 
         .contact-form {
@@ -233,6 +295,8 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+            position: relative;
+            z-index: 2;
         }
 
         .contact-form input, .contact-form textarea {
@@ -279,14 +343,23 @@
             .pricing-container { grid-template-columns: 1fr; gap: 30px; }
             .price-card.premium { transform: none; }
             .price-card.premium:hover { transform: translateY(-5px); }
+            .web-corner-tl, .web-corner-br { width: 100px; height: 100px; } /* Slightly smaller webs on mobile */
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Spider<span>Web</span></a>
+            <a href="#" class="logo">
+                <!-- Inline SVG Tiny Spider Icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff4757" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="12" r="3" fill="#ff4757"/>
+                    <path d="M9 12H3M15 12h6M10 15l-4 5M14 15l4 5M10 9L6 4M14 9l4-4"/>
+                </svg>
+                Spider<span>Web</span>
+            </a>
             <nav class="nav-links">
                 <a href="#pricing">Pricing</a>
                 <a href="#services">Services</a>
@@ -295,17 +368,27 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
+        <div class="web-corner-tl"></div>
+        <div class="web-corner-br"></div>
+        
         <h1>We Weave Perfect Websites For Local Cafes & Businesses</h1>
         <p>Get a stunning, fast, and mobile-friendly online presence for your coffee shop, cafe, or local eatery without the massive upfront cost.</p>
         <a href="#contact" class="cta-button">Get Started Today</a>
     </section>
 
+    <!-- Pricing Section -->
     <section class="pricing-section" id="pricing">
+        <div class="web-corner-tl"></div>
+        <div class="web-corner-br"></div>
+
         <h2 class="section-title">Simple, Transparent Pricing</h2>
         <div class="pricing-container">
             
+            <!-- Starter Plan -->
             <div class="price-card">
+                <div class="web-corner-tl" style="width:70px; height:70px;"></div>
                 <div>
                     <h3>Starter Web</h3>
                     <div class="price">8,999 Br<span>/year</span></div>
@@ -319,7 +402,9 @@
                 <a href="#contact" class="cta-button">Choose Starter</a>
             </div>
 
+            <!-- Premium Plan -->
             <div class="price-card premium">
+                <div class="web-corner-tl" style="width:70px; height:70px;"></div>
                 <div>
                     <h3>Premium Web</h3>
                     <div class="price">20,000 Br<span>/year</span></div>
@@ -336,7 +421,11 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section class="services-section" id="services">
+        <div class="web-corner-tl"></div>
+        <div class="web-corner-br"></div>
+
         <h2 class="section-title">Our Services</h2>
         <div class="services-placeholder">
             <p><strong>[Features & Services Slot]</strong></p>
@@ -344,9 +433,13 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact-section" id="contact">
+        <div class="web-corner-tl"></div>
+        <div class="web-corner-br"></div>
+
         <h2>Let's Build Your Digital Presence</h2>
-        <p style="margin-bottom: 30px;">Ready to attract more local customers? Drop us a line.</p>
+        <p style="margin-bottom: 30px; position: relative; z-index: 2;">Ready to attract more local customers? Drop us a line.</p>
         <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks for reaching out! This form is ready for your backend integration.');">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
@@ -355,6 +448,7 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 SpiderWeb. All rights reserved.</p>
     </footer>
