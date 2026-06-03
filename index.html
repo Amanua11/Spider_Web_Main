@@ -43,8 +43,8 @@
             overflow-x: hidden;
         }
 
-        /* --- FIX: SCROLL ANIMATION INITIAL STATES --- */
-        /* Elements that should hide until scrolled into view */
+        /* --- SCROLL ANIMATION INITIAL STATES --- */
+        /* Elements that hide until scrolled into view */
         .reveal {
             opacity: 0;
             transform: translateY(40px) scale(0.96);
@@ -516,7 +516,6 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
@@ -534,7 +533,6 @@
         </div>
     </header>
 
-    <!-- Hero Section (Removed .reveal class so it renders instantly) -->
     <section class="hero">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
@@ -543,7 +541,6 @@
         <a href="#contact" class="cta-button">Get Started Today</a>
     </section>
 
-    <!-- Services Section -->
     <section class="services-section" id="services">
         <h2 class="section-title reveal">SpiderWeb Services</h2>
         <p class="section-subtitle reveal">We design and launch premium, high-converting digital storefronts tailored specifically to get real customers through your doors. Hover over each service to learn more.</p>
@@ -585,7 +582,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="pricing-section" id="pricing">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
@@ -594,7 +590,6 @@
         <p class="section-subtitle reveal">Choose an annual digital plan aligned directly with your preferred service tiers and branding needs.</p>
         
         <div class="pricing-container">
-            <!-- Starter Plan -->
             <div class="price-card reveal reveal-delay-1">
                 <div class="web-corner-tl" style="width:100px; height:100px;"></div>
                 <div>
@@ -609,7 +604,6 @@
                 <a href="https://t.me/Amanu2007" class="price-inquiry-link" target="_blank">Inquire about prices</a>
             </div>
 
-            <!-- Premium Plan -->
             <div class="price-card premium reveal reveal-delay-2">
                 <div class="web-corner-tl" style="width:100px; height:100px;"></div>
                 <div>
@@ -626,7 +620,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
@@ -634,8 +627,7 @@
         <h2 class="reveal">Let's Build Your Digital Presence</h2>
         <p class="reveal" style="margin-bottom: 30px; color: var(--text-muted); position: relative; z-index: 2;">Ready to attract more local customers? Drop us a line.</p>
         
-        <!-- Replace 'YOUR_FORM_ID' with your unique Formspree token -->
-        <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="contact-form reveal" action="https://formspree.io/f/mpqezdrl" method="POST">
             <input type="text" name="customer_name" placeholder="Your Name" required>
             <input type="email" name="customer_email" placeholder="Your Email" required>
             <textarea rows="5" name="customer_message" placeholder="Tell us about your business" required></textarea>
@@ -643,12 +635,10 @@
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 SpiderWeb. All rights reserved.</p>
     </footer>
 
-    <!-- Continuous Infinite Scroll Observer Script -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const revealElements = document.querySelectorAll(".reveal");
@@ -670,7 +660,7 @@
                 scrollObserver.observe(element);
             });
             
-            // --- FIX: Run a quick check right away on load in case elements are already visible ---
+            // Forces scroll observer calculation updates instantly upon frame initialization
             setTimeout(() => {
                 window.scrollTo(window.scrollX, window.scrollY + 1);
                 window.scrollTo(window.scrollX, window.scrollY - 1);
