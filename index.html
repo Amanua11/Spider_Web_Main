@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpiderWeb | Website Development for Local Businesses</title>
     <style>
-        /* Modern, Clean Stylesheet */
+        /* Dark, Elegant Palette */
         :root {
-            --primary: #1a1a1a;
-            --accent: #ff4757;
+            --primary: #0a0a0a;       /* Deepest Black */
+            --bg-dark: #121212;       /* Elegant Dark Gray */
+            --bg-card: #1c1c1e;       /* Card Background */
+            --accent: #ff4757;        /* Crimson Red */
             --accent-hover: #e0404e;
-            --bg-light: #f4f4f4;
-            --text-dark: #333333;
-            --text-muted: #666666;
-            --white: #ffffff;
-            --web-color: rgba(0, 0, 0, 0.06);
-            --web-color-light: rgba(255, 255, 255, 0.08);
+            --text-light: #f5f5f7;    /* Primary Text */
+            --text-muted: #a1a1a6;    /* Secondary Text */
+            --web-color: rgba(255, 255, 255, 0.25); /* High Visibility Web Lines */
         }
 
-        /* Smooth Scrolling Enablement */
+        /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -31,20 +30,19 @@
         }
 
         body {
-            color: var(--text-dark);
-            background-color: var(--white);
+            color: var(--text-light);
+            background-color: var(--bg-dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* --- CSS SPIDER WEB BACKGROUNDS --- */
+        /* --- HIGH VISIBILITY CSS SPIDER WEBS --- */
         .web-corner-tl, .web-corner-br {
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             pointer-events: none;
             z-index: 1;
-            opacity: 0.8;
         }
 
         /* Top Left Web */
@@ -52,10 +50,10 @@
             top: 0;
             left: 0;
             background: 
-                radial-gradient(circle at 0 0, transparent 20px, var(--web-color) 21px, transparent 22px, transparent 40px, var(--web-color) 41px, transparent 42px, transparent 60px, var(--web-color) 61px, transparent 62px, transparent 80px, var(--web-color) 81px, transparent 82px, transparent 100px, var(--web-color) 101px, transparent 102px),
-                linear-gradient(to bottom right, transparent 49%, var(--web-color) 50%, transparent 51%),
-                linear-gradient(15deg, transparent 49%, var(--web-color) 50%, transparent 51%),
-                linear-gradient(75deg, transparent 49%, var(--web-color) 50%, transparent 51%);
+                radial-gradient(circle at 0 0, transparent 25px, var(--web-color) 26px, transparent 28px, transparent 50px, var(--web-color) 51px, transparent 53px, transparent 75px, var(--web-color) 76px, transparent 78px, transparent 100px, var(--web-color) 101px, transparent 103px, transparent 130px, var(--web-color) 131px, transparent 133px),
+                linear-gradient(to bottom right, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
+                linear-gradient(20deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
+                linear-gradient(70deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%);
         }
 
         /* Bottom Right Web */
@@ -63,20 +61,16 @@
             bottom: 0;
             right: 0;
             background: 
-                radial-gradient(circle at 100% 100%, transparent 20px, var(--web-color) 21px, transparent 22px, transparent 40px, var(--web-color) 41px, transparent 42px, transparent 60px, var(--web-color) 61px, transparent 62px, transparent 80px, var(--web-color) 81px, transparent 82px, transparent 100px, var(--web-color) 101px, transparent 102px),
-                linear-gradient(to top left, transparent 49%, var(--web-color) 50%, transparent 51%),
-                linear-gradient(195deg, transparent 49%, var(--web-color) 50%, transparent 51%),
-                linear-gradient(255deg, transparent 49%, var(--web-color) 50%, transparent 51%);
+                radial-gradient(circle at 100% 100%, transparent 25px, var(--web-color) 26px, transparent 28px, transparent 50px, var(--web-color) 51px, transparent 53px, transparent 75px, var(--web-color) 76px, transparent 78px, transparent 100px, var(--web-color) 101px, transparent 103px, transparent 130px, var(--web-color) 131px, transparent 133px),
+                linear-gradient(to top left, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
+                linear-gradient(200deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
+                linear-gradient(250deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%);
         }
 
-        /* Light Web Variant for Dark Backgrounds */
-        .contact-section .web-corner-tl { background: radial-gradient(circle at 0 0, transparent 20px, var(--web-color-light) 21px, transparent 22px, transparent 40px, var(--web-color-light) 41px, transparent 42px, transparent 60px, var(--web-color-light) 61px, transparent 62px, transparent 80px, var(--web-color-light) 81px, transparent 82px), linear-gradient(to bottom right, transparent 49%, var(--web-color-light) 50%, transparent 51%), linear-gradient(15deg, transparent 49%, var(--web-color-light) 50%, transparent 51%), linear-gradient(75deg, transparent 49%, var(--web-color-light) 50%, transparent 51%); }
-        .contact-section .web-corner-br { background: radial-gradient(circle at 100% 100%, transparent 20px, var(--web-color-light) 21px, transparent 22px, transparent 40px, var(--web-color-light) 41px, transparent 42px, transparent 60px, var(--web-color-light) 61px, transparent 62px, transparent 80px, var(--web-color-light) 81px, transparent 82px), linear-gradient(to top left, transparent 49%, var(--web-color-light) 50%, transparent 51%), linear-gradient(195deg, transparent 49%, var(--web-color-light) 50%, transparent 51%), linear-gradient(255deg, transparent 49%, var(--web-color-light) 50%, transparent 51%); }
-
-        /* Navigation */
+        /* Header Navigation */
         header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background-color: var(--primary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -94,7 +88,7 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--text-light);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -107,7 +101,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-muted);
             margin-left: 20px;
             font-weight: 500;
             transition: color 0.3s ease;
@@ -121,14 +115,18 @@
         .hero {
             position: relative;
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 120px 20px;
+            margin: 40px auto;
+            padding: 140px 20px;
             text-align: center;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .hero h1 {
             font-size: 48px;
-            color: var(--primary);
+            color: var(--text-light);
             margin-bottom: 20px;
             line-height: 1.2;
             position: relative;
@@ -144,10 +142,11 @@
             z-index: 2;
         }
 
+        /* CTA Buttons */
         .cta-button {
             display: inline-block;
             background-color: var(--accent);
-            color: var(--white);
+            color: var(--text-light);
             padding: 12px 30px;
             border-radius: 5px;
             text-decoration: none;
@@ -155,25 +154,27 @@
             transition: all 0.3s ease;
             position: relative;
             z-index: 2;
+            border: none;
         }
 
         .cta-button:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+            box-shadow: 0 5px 20px rgba(255, 71, 87, 0.4);
         }
 
         /* Pricing Section */
         .pricing-section {
             position: relative;
-            background-color: var(--bg-light);
-            padding: 80px 20px;
+            background-color: var(--primary);
+            padding: 100px 20px;
+            margin-top: 40px;
         }
 
         .section-title {
             text-align: center;
             font-size: 36px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             position: relative;
             z-index: 2;
         }
@@ -190,12 +191,12 @@
         }
 
         .price-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: var(--bg-card);
+            padding: 50px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             text-align: center;
-            border-top: 5px solid var(--primary);
+            border-top: 5px solid var(--text-muted);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -205,30 +206,33 @@
         }
 
         .price-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border-top-color: var(--text-light);
         }
 
         .price-card.premium {
             border-top-color: var(--accent);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
 
         .price-card.premium:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-top-color: var(--accent-hover);
         }
 
         .price-card h3 {
-            font-size: 22px;
+            font-size: 24px;
             margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
         }
 
         .price {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
         }
 
         .price span {
@@ -239,12 +243,14 @@
 
         .features-list {
             list-style: none;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             text-align: left;
+            position: relative;
+            z-index: 2;
         }
 
         .features-list li {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             color: var(--text-muted);
         }
 
@@ -252,21 +258,23 @@
             content: "✓ ";
             color: var(--accent);
             font-weight: bold;
+            margin-right: 5px;
         }
 
-        /* Services Placeholder Section */
+        /* Services Section */
         .services-section {
             position: relative;
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
+            margin: 40px auto;
+            padding: 100px 20px;
             text-align: center;
         }
 
         .services-placeholder {
-            border: 2px dashed #cccccc;
-            padding: 40px;
-            border-radius: 8px;
+            background: var(--bg-card);
+            border: 2px dashed rgba(255, 255, 255, 0.15);
+            padding: 50px;
+            border-radius: 12px;
             color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
@@ -278,9 +286,9 @@
         .contact-section {
             position: relative;
             background-color: var(--primary);
-            color: var(--white);
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .contact-section h2 {
@@ -294,30 +302,33 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
             position: relative;
             z-index: 2;
         }
 
         .contact-form input, .contact-form textarea {
-            padding: 12px;
-            border-radius: 5px;
-            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             width: 100%;
             outline: none;
-            transition: box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .contact-form input:focus, .contact-form textarea:focus {
-            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.4);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.25);
         }
 
         .contact-form button {
             background-color: var(--accent);
-            color: var(--white);
+            color: var(--text-light);
             border: none;
-            padding: 12px;
-            border-radius: 5px;
+            padding: 14px;
+            border-radius: 6px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -330,20 +341,20 @@
 
         /* Footer */
         footer {
-            background-color: #111111;
-            color: #888888;
+            background-color: #050505;
+            color: #555555;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 { font-size: 36px; }
             .pricing-container { grid-template-columns: 1fr; gap: 30px; }
-            .price-card.premium { transform: none; }
-            .price-card.premium:hover { transform: translateY(-5px); }
-            .web-corner-tl, .web-corner-br { width: 100px; height: 100px; } /* Slightly smaller webs on mobile */
+            .price-card { padding: 35px 20px; }
+            .web-corner-tl, .web-corner-br { width: 120px; height: 120px; }
         }
     </style>
 </head>
@@ -353,7 +364,6 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
-                <!-- Inline SVG Tiny Spider Icon -->
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff4757" stroke-width="2" stroke-linecap="round">
                     <circle cx="12" cy="12" r="3" fill="#ff4757"/>
                     <path d="M9 12H3M15 12h6M10 15l-4 5M14 15l4 5M10 9L6 4M14 9l4-4"/>
@@ -388,7 +398,7 @@
             
             <!-- Starter Plan -->
             <div class="price-card">
-                <div class="web-corner-tl" style="width:70px; height:70px;"></div>
+                <div class="web-corner-tl" style="width:100px; height:100px;"></div>
                 <div>
                     <h3>Starter Web</h3>
                     <div class="price">8,999 Br<span>/year</span></div>
@@ -404,7 +414,7 @@
 
             <!-- Premium Plan -->
             <div class="price-card premium">
-                <div class="web-corner-tl" style="width:70px; height:70px;"></div>
+                <div class="web-corner-tl" style="width:100px; height:100px;"></div>
                 <div>
                     <h3>Premium Web</h3>
                     <div class="price">20,000 Br<span>/year</span></div>
@@ -428,7 +438,7 @@
 
         <h2 class="section-title">Our Services</h2>
         <div class="services-placeholder">
-            <p><strong>[Features & Services Slot]</strong></p>
+            <p><strong style="color: var(--text-light);">[Features & Services Slot]</strong></p>
             <p style="margin-top: 10px;">We will list your specific service breakdowns, hosting details, and custom features right here once you are ready!</p>
         </div>
     </section>
@@ -439,8 +449,8 @@
         <div class="web-corner-br"></div>
 
         <h2>Let's Build Your Digital Presence</h2>
-        <p style="margin-bottom: 30px; position: relative; z-index: 2;">Ready to attract more local customers? Drop us a line.</p>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks for reaching out! This form is ready for your backend integration.');">
+        <p style="margin-bottom: 30px; color: var(--text-muted); position: relative; z-index: 2;">Ready to attract more local customers? Drop us a line.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks for reaching out!');">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea rows="5" placeholder="Tell us about your business" required></textarea>
