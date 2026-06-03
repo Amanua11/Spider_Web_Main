@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpiderWeb | Website Development for Local Businesses</title>
     <style>
-        /* Spider-Man Inspired Dark Palette */
+        /* Spider-Man Inspired Ambient Palette */
         :root {
             --primary: #050505;       /* Pure Black */
-            --bg-dark: #0d0d0d;       /* Deep Charcoal Black */
-            --bg-card: #141416;       /* Sleek Card Black */
+            /* Dynamic Radial Background: Deep Black that softens into a dark crimson glow */
+            --bg-gradient: radial-gradient(circle at center, #250609 0%, #050505 80%);
+            --bg-card: rgba(20, 20, 22, 0.75); /* Translucent sleek card to let the red glow show through */
             --accent: #ff4757;        /* Spider-Man Crimson Red */
             --accent-hover: #ff2a3a;
             --text-light: #f5f5f7;    /* Primary Text */
             --text-muted: #a1a1a6;    /* Secondary Text */
             --web-color: rgba(255, 71, 87, 0.35); /* High Visibility Red Web Lines */
-            --border-red: rgba(255, 71, 87, 0.15); /* Subtle Crimson Borders */
+            --border-red: rgba(255, 71, 87, 0.2);  /* Slightly sharper crimson borders */
         }
 
         /* Smooth Scrolling */
@@ -32,7 +33,8 @@
 
         body {
             color: var(--text-light);
-            background-color: var(--bg-dark);
+            background: var(--bg-gradient);
+            background-attachment: fixed; /* Keeps the red ambient glow centered while scrolling */
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -70,7 +72,8 @@
 
         /* Header Navigation */
         header {
-            background-color: var(--primary);
+            background-color: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(10px); /* Premium frosty header */
             border-bottom: 1px solid var(--border-red);
             position: sticky;
             top: 0;
@@ -120,6 +123,7 @@
             padding: 140px 20px;
             text-align: center;
             background: var(--bg-card);
+            backdrop-filter: blur(4px);
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.7);
             border: 1px solid var(--border-red);
@@ -161,13 +165,13 @@
         .cta-button:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 71, 87, 0.5);
+            box-shadow: 0 5px 20px rgba(255, 71, 87, 0.6);
         }
 
         /* Pricing Section */
         .pricing-section {
             position: relative;
-            background-color: var(--primary);
+            background: transparent; /* Allows main gradient background to show through fully */
             padding: 100px 20px;
             margin-top: 40px;
             border-top: 1px solid var(--border-red);
@@ -205,6 +209,7 @@
 
         .price-card {
             background: var(--bg-card);
+            backdrop-filter: blur(4px);
             padding: 50px 30px;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
@@ -223,7 +228,7 @@
 
         .price-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(255, 71, 87, 0.15);
+            box-shadow: 0 15px 35px rgba(255, 71, 87, 0.25);
             border-top-color: var(--text-light);
         }
 
@@ -286,16 +291,16 @@
         }
 
         .services-pitch {
-            background: rgba(255, 71, 87, 0.08);
+            background: rgba(255, 71, 87, 0.12); /* Increased alpha for strong presence over dark red */
             border-left: 4px solid var(--accent);
             padding: 20px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 50px;
             font-size: 16px;
             color: var(--text-light);
-            border-top: 1px solid rgba(255, 71, 87, 0.1);
-            border-right: 1px solid rgba(255, 71, 87, 0.1);
-            border-bottom: 1px solid rgba(255, 71, 87, 0.1);
+            border-top: 1px solid rgba(255, 71, 87, 0.15);
+            border-right: 1px solid rgba(255, 71, 87, 0.15);
+            border-bottom: 1px solid rgba(255, 71, 87, 0.15);
         }
 
         .services-grid {
@@ -308,6 +313,7 @@
 
         .service-card {
             background: var(--bg-card);
+            backdrop-filter: blur(4px);
             border: 1px solid var(--border-red);
             padding: 40px 30px;
             border-radius: 12px;
@@ -319,8 +325,8 @@
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(255, 71, 87, 0.15);
-            border-color: rgba(255, 71, 87, 0.4);
+            box-shadow: 0 12px 30px rgba(255, 71, 87, 0.25);
+            border-color: rgba(255, 71, 87, 0.5);
         }
 
         .service-card h3 {
@@ -349,7 +355,7 @@
         /* Contact Section */
         .contact-section {
             position: relative;
-            background-color: var(--primary);
+            background: transparent;
             padding: 100px 20px;
             text-align: center;
             border-top: 1px solid var(--border-red);
@@ -374,8 +380,8 @@
         .contact-form input, .contact-form textarea {
             padding: 14px;
             border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: var(--bg-dark);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background-color: rgba(5, 5, 5, 0.8);
             color: var(--text-light);
             width: 100%;
             outline: none;
@@ -384,7 +390,7 @@
 
         .contact-form input:focus, .contact-form textarea:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.3);
+            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.35);
         }
 
         .contact-form button {
@@ -410,7 +416,7 @@
             text-align: center;
             padding: 25px;
             font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.01);
+            border-top: 1px solid var(--border-red);
         }
 
         /* Responsive Design */
