@@ -11,12 +11,16 @@
             /* Dynamic Radial Background: Deep Black that softens into a dark crimson glow */
             --bg-gradient: radial-gradient(circle at center, #250609 0%, #050505 80%);
             --bg-card: rgba(20, 20, 22, 0.75); /* Translucent sleek card to let the red glow show through */
-            --accent: #bb1e25;        /* Premium Dark Crimson Red from Gemini_Generated_Image_bb5kvcbb5kvcbb5k.png */
+            --accent: #bb1e25;        /* Premium Dark Crimson Red */
             --accent-hover: #ff2a3a;
             --text-light: #f5f5f7;    /* Primary Text */
             --text-muted: #a1a1a6;    /* Secondary Text */
             --web-color: rgba(187, 30, 37, 0.35); /* High Visibility Crimson Web Lines */
             --border-red: rgba(187, 30, 37, 0.2);  /* Crimson borders */
+            
+            /* Unique Pricing Link Styles */
+            --price-blue: #00a2ff;    /* Vibrant Electric Blue */
+            --price-blue-hover: #55c2ff;
         }
 
         /* Smooth Scrolling */
@@ -131,7 +135,7 @@
             text-transform: uppercase;
         }
 
-        /* The 1 and Only SVG Logo - Restored to original 'S' geometry style */
+        /* The 1 and Only SVG Logo */
         .logo-svg {
             width: 42px;
             height: 42px;
@@ -167,7 +171,6 @@
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.7);
             border: 1px solid var(--border-red);
-            /* Initial entry splash animation for the hero card itself */
             animation: heroEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
@@ -294,19 +297,25 @@
             z-index: 2;
         }
 
-        .price {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--text-light);
+        /* Custom Unique Link Styling for Pricing Replacement */
+        .price-inquiry-link {
+            display: inline-block;
+            font-family: 'Courier New', Courier, monospace; /* Unique structural typeface */
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--price-blue);
+            text-decoration: none;
+            letter-spacing: -0.5px;
             margin-bottom: 25px;
             position: relative;
             z-index: 2;
+            transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
         }
 
-        .price span {
-            font-size: 16px;
-            color: var(--text-muted);
-            font-weight: 400;
+        .price-inquiry-link:hover {
+            color: var(--price-blue-hover);
+            transform: scale(1.03);
+            text-shadow: 0 0 10px rgba(0, 162, 255, 0.6);
         }
 
         .features-list {
@@ -502,7 +511,6 @@
             .web-corner-tl, .web-corner-br { width: 120px; height: 120px; }
             .service-card p { max-height: 200px; opacity: 1; transform: translateY(0); margin-top: 10px; }
             .service-card h3 { margin-bottom: 10px; }
-            /* Turn off mobile delay for snappier performance */
             .reveal { transition-delay: 0s !important; }
         }
     </style>
@@ -513,12 +521,10 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
-                <!-- Single Restored 'S' Logo Vector -->
                 <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M63 36 C58 27, 42 27, 37 36 C31 46, 69 54, 63 64 C58 73, 42 73, 37 64" stroke="#bb1e25" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <ellipse cx="50" cy="50" rx="45" ry="16" stroke="#bb1e25" stroke-width="5" transform="rotate(-6 50 50)"/>
                 </svg>
-                
                 <span class="brand-spider">Spider</span><span class="brand-web">Web</span>
             </a>
             <nav class="nav-links">
@@ -533,8 +539,6 @@
     <section class="hero">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
-        
-        <!-- Updated Headline Below -->
         <h1>We Weave Perfect Websites For Your Businesses</h1>
         <p>Get a stunning, fast, and mobile-friendly online presence for your coffee shop, cafe, or local eatery without the massive upfront cost.</p>
         <a href="#contact" class="cta-button">Get Started Today</a>
@@ -545,41 +549,35 @@
         <h2 class="section-title reveal">SpiderWeb Services</h2>
         <p class="section-subtitle reveal">We design and launch premium, high-converting digital storefronts tailored specifically to get real customers through your doors. Hover over each service to learn more.</p>
 
-        <!-- Dynamic Pitch Hook -->
         <div class="services-pitch reveal">
             <strong>💡 The SpiderWeb Advantage:</strong> Local business owners don't just need lines of code—they need more footsteps and orders. We architect modern web infrastructure structured exclusively to drive local visibility and conversions from day one.
         </div>
 
         <div class="services-grid">
-            <!-- Service 1 -->
             <div class="service-card reveal reveal-delay-1">
                 <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>1.</span> Custom Restaurant & Cafe Designs</h3>
                 <p>Tailor-made interfaces engineered to highlight your culinary aesthetic. We build sleek, interactive digital menus, integrate smooth reservation prompts, and display eye-catching high-resolution photo galleries of your spaces.</p>
             </div>
 
-            <!-- Service 2 -->
             <div class="service-card reveal reveal-delay-2">
                 <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>2.</span> Local SEO & Discovery Optimization</h3>
                 <p>Make sure you stand out exactly when customers are hungry. We fully optimize your web properties to rank dynamically on Google Local Search results and synchronize map markers to guide foot traffic straight to your counters.</p>
             </div>
 
-            <!-- Service 3 -->
             <div class="service-card reveal reveal-delay-3">
                 <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>3.</span> Mobile-First Responsive Engineering</h3>
                 <p>Over 70% of local diners look up coffee shops and fast food menus directly from their phones while on the move. Our creations feature flawless performance, responsive layouts, and lightning-fast loading across all mobile screen sizes.</p>
             </div>
 
-            <!-- Service 4 -->
             <div class="service-card reveal reveal-delay-4">
                 <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>4.</span> High-Performance Speed Integration</h3>
                 <p>A slow website loses customers before they even look at your prices. We configure lightweight code architectures and advanced image compression tactics to keep your site rendering within microseconds.</p>
             </div>
 
-            <!-- Service 5 -->
             <div class="service-card reveal reveal-delay-1">
                 <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>5.</span> Managed Maintenance & Hosting</h3>
@@ -602,7 +600,8 @@
                 <div class="web-corner-tl" style="width:100px; height:100px;"></div>
                 <div>
                     <h3>Starter Web</h3>
-                    <div class="price">8,999 Br<span>/year</span></div>
+                    <!-- Price tag replaced with unique blue link -->
+                    <a href="https://t.me/Amanu2007" class="price-inquiry-link" target="_blank">Inquire about prices</a>
                     <ul class="features-list">
                         <li>Standard Domain Extension</li>
                         <li>Fully Responsive Design</li>
@@ -610,7 +609,7 @@
                         <li>Google Maps Integration</li>
                     </ul>
                 </div>
-                <a href="#contact" class="cta-button">Choose Starter</a>
+                <a href="https://t.me/Amanu2007" class="cta-button" target="_blank">Choose Starter</a>
             </div>
 
             <!-- Premium Plan -->
@@ -618,7 +617,8 @@
                 <div class="web-corner-tl" style="width:100px; height:100px;"></div>
                 <div>
                     <h3>Premium Web</h3>
-                    <div class="price">20,000 Br<span>/year</span></div>
+                    <!-- Price tag replaced with unique blue link -->
+                    <a href="https://t.me/Amanu2007" class="price-inquiry-link" target="_blank">Inquire about prices</a>
                     <ul class="features-list">
                         <li>Preferred Premium Domain</li>
                         <li>Advanced Interactive Elements</li>
@@ -626,7 +626,7 @@
                         <li>Full SEO Setup for Local Search</li>
                     </ul>
                 </div>
-                <a href="#contact" class="cta-button">Choose Premium</a>
+                <a href="https://t.me/Amanu2007" class="cta-button" target="_blank">Choose Premium</a>
             </div>
         </div>
     </section>
@@ -659,15 +659,13 @@
             const scrollObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Element enters screen -> animate in
                         entry.target.classList.add("active");
                     } else {
-                        // Element leaves screen -> reset state so it can animate again!
                         entry.target.classList.remove("active");
                     }
                 });
             }, {
-                threshold: 0.1,      /* Activates as soon as 10% is visible */
+                threshold: 0.1,
                 rootMargin: "0px 0px -10px 0px"
             });
 
