@@ -16,8 +16,9 @@
             --text-muted: #a1a1a6;    /* Secondary Text */
             --web-color: rgba(187, 30, 37, 0.35); /* High Visibility Crimson Web Lines */
             --border-red: rgba(187, 30, 37, 0.2);  /* Crimson borders */
-            --price-white: #ffffff;
-            --price-white-hover: #e1e1e6;
+            /* UPDATED: Added highly noticeable link colors for the pricing anchors */
+            --link-blue: #00a8ff;
+            --link-blue-hover: #54a0ff;
         }
 
         /* Smooth Scrolling */
@@ -374,12 +375,13 @@
             z-index: 2;
         }
 
+        /* UPDATED: Changed color to an explicitly vibrant, scannable link blue */
         .price-inquiry-link {
             display: inline-block;
             font-size: 16px;
             font-weight: 700;
-            color: var(--price-white);
-            text-decoration: none;
+            color: var(--link-blue);
+            text-decoration: underline;
             margin-top: 25px;
             position: relative;
             z-index: 2;
@@ -387,7 +389,7 @@
         }
 
         .price-inquiry-link:hover {
-            color: var(--price-white-hover);
+            color: var(--link-blue-hover);
             transform: scale(1.02);
         }
 
@@ -612,7 +614,6 @@
                 <p>Run your business hands-free while we manage your technical architecture. Our active workflows cover secure hosting administration, periodic site file backups, professional custom email systems, and regular core system updates.</p>
             </div>
 
-            <!-- New Corporate Clients Module Added Below -->
             <div class="service-card reveal reveal-delay-1">
                 <h3><span>5.</span> Professional and Adequate designs for corporate clients</h3>
                 <p>Engineered clean layouts, corporate branding schemes, and scalable web structures designed to present large enterprises with unmatched authority, optimal performance metrics, and professional interface architecture.</p>
