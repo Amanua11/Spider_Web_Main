@@ -89,6 +89,7 @@
             align-items: center;
         }
 
+        /* Unified Brand Lockup Styling */
         .logo {
             font-size: 24px;
             font-weight: 700;
@@ -96,11 +97,10 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             letter-spacing: 1.5px;
         }
 
-        /* Logo Brand Colors inspired by text emblem layout */
         .logo .brand-pider {
             color: var(--accent);
             text-transform: uppercase;
@@ -111,21 +111,12 @@
             text-transform: uppercase;
         }
 
-        /* Main Big Logo SVG */
+        /* The 1 and Only SVG Logo */
         .logo-svg {
-            width: 44px;
-            height: 44px;
+            width: 42px;
+            height: 42px;
             transition: transform 0.3s ease;
             filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.8));
-        }
-
-        /* Smaller Signature/Inline Icon matching the first logo in the text emblem */
-        .signature-svg {
-            width: 28px;
-            height: 28px;
-            vertical-align: middle;
-            margin-right: 4px;
-            filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.6));
         }
 
         .logo:hover .logo-svg {
@@ -493,19 +484,14 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
-                <!-- Replicated Main Red Wide-Orbital Logo from the center of Gemini_Generated_Image_bb5kvcbb5kvcbb5k.png -->
+                <!-- Single Unified Orbital Logo matching Gemini_Generated_Image_bb5kvcbb5kvcbb5k.png -->
                 <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M66 38 C60 25, 40 25, 34 38 C26 50, 74 50, 66 62 C60 75, 40 75, 34 62" stroke="#bb1e25" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                     <ellipse cx="50" cy="50" rx="48" ry="14" stroke="#bb1e25" stroke-width="5.5"/>
                 </svg>
                 
-                <!-- Signature Logo Arrangement inspired directly by the first inline logo configuration -->
-                <span class="brand-pider">
-                    <!-- Miniature signature icon placement prefixing the typography -->
-                    <svg class="signature-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M66 38 C60 25, 40 25, 34 38 C26 50, 74 50, 66 62 C60 75, 40 75, 34 62" stroke="#bb1e25" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                        <ellipse cx="50" cy="50" rx="48" ry="14" stroke="#bb1e25" stroke-width="5.5"/>
-                    </svg>pider</span><span class="brand-web">Web</span>
+                <!-- Single typographic lockup following the single icon -->
+                <span class="brand-pider">pider</span><span class="brand-web">Web</span>
             </a>
             <nav class="nav-links">
                 <a href="#services">SpiderWeb Services</a>
