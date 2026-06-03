@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpiderWeb | Website Development for Local Businesses</title>
     <style>
-        /* Dark, Elegant Palette */
+        /* Spider-Man Inspired Dark Palette */
         :root {
-            --primary: #0a0a0a;       /* Deepest Black */
-            --bg-dark: #121212;       /* Elegant Dark Gray */
-            --bg-card: #1c1c1e;       /* Card Background */
-            --accent: #ff4757;        /* Crimson Red */
-            --accent-hover: #e0404e;
+            --primary: #050505;       /* Pure Black */
+            --bg-dark: #0d0d0d;       /* Deep Charcoal Black */
+            --bg-card: #141416;       /* Sleek Card Black */
+            --accent: #ff4757;        /* Spider-Man Crimson Red */
+            --accent-hover: #ff2a3a;
             --text-light: #f5f5f7;    /* Primary Text */
             --text-muted: #a1a1a6;    /* Secondary Text */
-            --web-color: rgba(255, 255, 255, 0.25); /* High Visibility Web Lines */
+            --web-color: rgba(255, 71, 87, 0.35); /* High Visibility Red Web Lines */
+            --border-red: rgba(255, 71, 87, 0.15); /* Subtle Crimson Borders */
         }
 
         /* Smooth Scrolling */
@@ -36,7 +37,7 @@
             overflow-x: hidden;
         }
 
-        /* --- HIGH VISIBILITY CSS SPIDER WEBS --- */
+        /* --- HIGH VISIBILITY RED CSS SPIDER WEBS --- */
         .web-corner-tl, .web-corner-br {
             position: absolute;
             width: 180px;
@@ -70,7 +71,7 @@
         /* Header Navigation */
         header {
             background-color: var(--primary);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid var(--border-red);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -120,8 +121,8 @@
             text-align: center;
             background: var(--bg-card);
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            border: 1px solid var(--border-red);
         }
 
         .hero h1 {
@@ -160,7 +161,7 @@
         .cta-button:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 71, 87, 0.4);
+            box-shadow: 0 5px 20px rgba(255, 71, 87, 0.5);
         }
 
         /* Pricing Section */
@@ -169,6 +170,8 @@
             background-color: var(--primary);
             padding: 100px 20px;
             margin-top: 40px;
+            border-top: 1px solid var(--border-red);
+            border-bottom: 1px solid var(--border-red);
         }
 
         .section-title {
@@ -204,9 +207,12 @@
             background: var(--bg-card);
             padding: 50px 30px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             text-align: center;
             border-top: 5px solid var(--text-muted);
+            border-left: 1px solid var(--border-red);
+            border-right: 1px solid var(--border-red);
+            border-bottom: 1px solid var(--border-red);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -217,7 +223,7 @@
 
         .price-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(255, 71, 87, 0.15);
             border-top-color: var(--text-light);
         }
 
@@ -280,13 +286,16 @@
         }
 
         .services-pitch {
-            background: rgba(255, 71, 87, 0.05);
+            background: rgba(255, 71, 87, 0.08);
             border-left: 4px solid var(--accent);
             padding: 20px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 50px;
             font-size: 16px;
             color: var(--text-light);
+            border-top: 1px solid rgba(255, 71, 87, 0.1);
+            border-right: 1px solid rgba(255, 71, 87, 0.1);
+            border-bottom: 1px solid rgba(255, 71, 87, 0.1);
         }
 
         .services-grid {
@@ -299,19 +308,19 @@
 
         .service-card {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-red);
             padding: 40px 30px;
             border-radius: 12px;
             position: relative;
             overflow: hidden;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-            border-color: rgba(255, 71, 87, 0.2);
+            box-shadow: 0 12px 30px rgba(255, 71, 87, 0.15);
+            border-color: rgba(255, 71, 87, 0.4);
         }
 
         .service-card h3 {
@@ -343,7 +352,7 @@
             background-color: var(--primary);
             padding: 100px 20px;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-top: 1px solid var(--border-red);
         }
 
         .contact-section h2 {
@@ -375,7 +384,7 @@
 
         .contact-form input:focus, .contact-form textarea:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.25);
+            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.3);
         }
 
         .contact-form button {
@@ -396,12 +405,12 @@
 
         /* Footer */
         footer {
-            background-color: #050505;
+            background-color: #020202;
             color: #555555;
             text-align: center;
             padding: 25px;
             font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.01);
         }
 
         /* Responsive Design */
@@ -450,41 +459,41 @@
 
         <!-- Dynamic Pitch Hook -->
         <div class="services-pitch">
-            <strong>💡 The SpiderWeb Advantage:</strong> Local local business owners don't just need lines of code—they need more footsteps and orders. We architect modern web infrastructure structured exclusively to drive local visibility and conversions from day one.
+            <strong>💡 The SpiderWeb Advantage:</strong> Local business owners don't just need lines of code—they need more footsteps and orders. We architect modern web infrastructure structured exclusively to drive local visibility and conversions from day one.
         </div>
 
         <div class="services-grid">
             <!-- Service 1 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.6;"></div>
                 <h3><span>1.</span> Custom Restaurant & Cafe Designs</h3>
                 <p>Tailor-made interfaces engineered to highlight your culinary aesthetic. We build sleek, interactive digital menus, integrate smooth reservation prompts, and display eye-catching high-resolution photo galleries of your spaces.</p>
             </div>
 
             <!-- Service 2 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.6;"></div>
                 <h3><span>2.</span> Local SEO & Discovery Optimization</h3>
                 <p>Make sure you stand out exactly when customers are hungry. We fully optimize your web properties to rank dynamically on Google Local Search results and synchronize map markers to guide foot traffic straight to your counters.</p>
             </div>
 
             <!-- Service 3 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.6;"></div>
                 <h3><span>3.</span> Mobile-First Responsive Engineering</h3>
                 <p>Over 70% of local diners look up coffee shops and fast food menus directly from their phones while on the move. Our creations feature flawless performance, responsive layouts, and lightning-fast loading across all mobile screen sizes.</p>
             </div>
 
             <!-- Service 4 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.6;"></div>
                 <h3><span>4.</span> High-Performance Speed Integration</h3>
                 <p>A slow website loses customers before they even look at your prices. We configure lightweight code architectures and advanced image compression tactics to keep your site rendering within microseconds.</p>
             </div>
 
             <!-- Service 5 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.4;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.6;"></div>
                 <h3><span>5.</span> Managed Maintenance & Hosting</h3>
                 <p>Run your business hands-free while we manage your technical architecture. Our active workflows cover secure hosting administration, periodic site file backups, professional custom email systems, and regular core system updates.</p>
             </div>
