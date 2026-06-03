@@ -9,16 +9,16 @@
         :root {
             --primary: #050505;       /* Pure Black */
             --bg-gradient: radial-gradient(circle at center, #250609 0%, #050505 80%);
-            --bg-card: rgba(20, 20, 22, 0.75); /* Translucent sleek card */
+            --bg-card: rgba(20, 20, 22, 0.75); 
             --accent: #bb1e25;        /* Premium Dark Crimson Red */
             --accent-hover: #ff2a3a;
-            --text-light: #f5f5f7;    /* Primary Text */
-            --text-muted: #a1a1a6;    /* Secondary Text */
-            --web-color: rgba(187, 30, 37, 0.35); /* High Visibility Crimson Web Lines */
-            --border-red: rgba(187, 30, 37, 0.2);  /* Crimson borders */
-            /* UPDATED: Added highly noticeable link colors for the pricing anchors */
-            --link-blue: #00a8ff;
-            --link-blue-hover: #54a0ff;
+            --text-light: #f5f5f7;    
+            --text-muted: #a1a1a6;    
+            --web-color: rgba(187, 30, 37, 0.35); 
+            --border-red: rgba(187, 30, 37, 0.2);  
+            /* UPDATED: Bloody Red Link Palette */
+            --bloody-red: #8b0000;
+            --bloody-red-bright: #ff0000;
         }
 
         /* Smooth Scrolling */
@@ -375,12 +375,12 @@
             z-index: 2;
         }
 
-        /* UPDATED: Changed color to an explicitly vibrant, scannable link blue */
+        /* UPDATED: Bloody Red Links */
         .price-inquiry-link {
             display: inline-block;
             font-size: 16px;
             font-weight: 700;
-            color: var(--link-blue);
+            color: var(--bloody-red);
             text-decoration: underline;
             margin-top: 25px;
             position: relative;
@@ -389,8 +389,9 @@
         }
 
         .price-inquiry-link:hover {
-            color: var(--link-blue-hover);
+            color: var(--bloody-red-bright);
             transform: scale(1.02);
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
         }
 
         .features-list {
@@ -474,90 +475,22 @@
             border-top: 1px solid var(--border-red);
         }
 
-        /* --- GLOBAL RESPONSIVE MEDIA QUERIES --- */
+        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 12px;
-                padding: 12px 15px;
-            }
-            .nav-links {
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                gap: 15px;
-            }
-            .nav-links a {
-                margin-left: 0;
-                font-size: 13px;
-            }
-
-            .hero {
-                margin: 10px;
-                padding: 50px 16px;
-            }
-            .hero h1 {
-                font-size: 24px;
-            }
-            .hero p {
-                font-size: 14px;
-            }
-            .section-title {
-                font-size: 22px;
-            }
-            .section-subtitle {
-                font-size: 13px;
-                padding: 0 5px;
-            }
-
-            .web-corner-tl, .web-corner-br {
-                width: 100px;
-                height: 100px;
-                opacity: 0.4;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-            .service-card {
-                padding: 22px;
-                min-height: auto;
-            }
-            .service-card h3 {
-                margin-bottom: 8px !important;
-                font-size: 16px;
-            }
-            .service-card p {
-                max-height: 500px !important;
-                opacity: 1 !important;
-                transform: translateY(0) !important;
-                font-size: 13px;
-            }
-
-            .pricing-section {
-                padding: 50px 15px;
-            }
-            .pricing-container {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            .price-card {
-                padding: 30px 20px;
-            }
-            .contact-section {
-                padding: 50px 15px;
-            }
-            .reveal {
-                transition-delay: 0s !important;
-                transform: translateY(15px) scale(1) !important;
-            }
+            .nav-container { flex-direction: column; gap: 12px; padding: 12px 15px; }
+            .nav-links { display: flex; width: 100%; justify-content: center; gap: 15px; }
+            .nav-links a { margin-left: 0; font-size: 13px; }
+            .hero { margin: 10px; padding: 50px 16px; }
+            .hero h1 { font-size: 24px; }
+            .section-title { font-size: 22px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .pricing-container { grid-template-columns: 1fr; }
+            .reveal { transition-delay: 0s !important; transform: translateY(15px) scale(1) !important; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
@@ -575,7 +508,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
@@ -584,7 +516,6 @@
         <a href="#contact" class="cta-button">Get Started Today</a>
     </section>
 
-    <!-- Services Section -->
     <section class="services-section" id="services">
         <h2 class="section-title reveal">SpiderWeb Services</h2>
         <p class="section-subtitle reveal">We design and launch premium, high-converting digital storefronts tailored specifically to get real customers through your doors.</p>
@@ -598,22 +529,18 @@
                 <h3><span>1.</span> Custom Restaurant & Cafe Designs</h3>
                 <p>Tailor-made interfaces engineered to highlight your culinary aesthetic. We build sleek, interactive digital menus, integrate smooth reservation prompts, and display eye-catching high-resolution photo galleries of your spaces.</p>
             </div>
-
             <div class="service-card reveal reveal-delay-2">
                 <h3><span>2.</span> Mobile-First Responsive Engineering</h3>
                 <p>Over 70% of local diners look up coffee shops and fast food menus directly from their phones while on the move. Our creations feature flawless performance, responsive layouts, and lightning-fast loading across all mobile screen sizes.</p>
             </div>
-
             <div class="service-card reveal reveal-delay-3">
                 <h3><span>3.</span> High-Performance Speed Integration</h3>
                 <p>A slow website loses customers before they even look at your prices. We configure lightweight code architectures and advanced image compression tactics to keep your site rendering within microseconds.</p>
             </div>
-
             <div class="service-card reveal reveal-delay-4">
                 <h3><span>4.</span> Managed Maintenance & Hosting</h3>
                 <p>Run your business hands-free while we manage your technical architecture. Our active workflows cover secure hosting administration, periodic site file backups, professional custom email systems, and regular core system updates.</p>
             </div>
-
             <div class="service-card reveal reveal-delay-1">
                 <h3><span>5.</span> Professional and Adequate designs for corporate clients</h3>
                 <p>Engineered clean layouts, corporate branding schemes, and scalable web structures designed to present large enterprises with unmatched authority, optimal performance metrics, and professional interface architecture.</p>
@@ -621,16 +548,11 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="pricing-section" id="pricing">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
-
         <h2 class="section-title reveal">Simple, Transparent Pricing</h2>
-        <p class="section-subtitle reveal">Choose an annual digital plan aligned directly with your preferred service tiers and branding needs.</p>
-        
         <div class="pricing-container">
-            <!-- Starter Plan -->
             <div class="price-card reveal reveal-delay-1">
                 <div>
                     <h3>Starter Web</h3>
@@ -643,8 +565,6 @@
                 </div>
                 <a href="https://t.me/Amanu2007" class="price-inquiry-link" target="_blank">Inquire about prices</a>
             </div>
-
-            <!-- Premium Plan -->
             <div class="price-card premium reveal reveal-delay-2">
                 <div>
                     <h3>Premium Web</h3>
@@ -660,14 +580,10 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
-
         <h2 class="reveal">Let's Build Your Digital Presence</h2>
-        <p class="reveal" style="margin-bottom: 30px; color: var(--text-muted); position: relative; z-index: 2;">Ready to attract more local customers? Drop us a line.</p>
-        
         <form class="contact-form reveal" action="https://formspree.io/f/mpqezdrl" method="POST">
             <input type="text" name="customer_name" placeholder="Your Name" required>
             <input type="email" name="customer_email" placeholder="Your Email" required>
@@ -676,37 +592,21 @@
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 SpiderWeb. All rights reserved.</p>
     </footer>
 
-    <!-- Continuous Scroll Observer Script -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const revealElements = document.querySelectorAll(".reveal");
-            
             const scrollObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                    } else {
-                        entry.target.classList.remove("active");
-                    }
+                    if (entry.isIntersecting) entry.target.classList.add("active");
+                    else entry.target.classList.remove("active");
                 });
-            }, {
-                threshold: 0.05,
-                rootMargin: "0px 0px -5px 0px"
-            });
-
-            revealElements.forEach(element => {
-                scrollObserver.observe(element);
-            });
-            
-            setTimeout(() => {
-                window.scrollTo(window.scrollX, window.scrollY + 1);
-                window.scrollTo(window.scrollX, window.scrollY - 1);
-            }, 100);
+            }, { threshold: 0.05, rootMargin: "0px 0px -5px 0px" });
+            revealElements.forEach(element => scrollObserver.observe(element));
+            setTimeout(() => { window.scrollTo(window.scrollX, window.scrollY + 1); window.scrollTo(window.scrollX, window.scrollY - 1); }, 100);
         });
     </script>
 </body>
