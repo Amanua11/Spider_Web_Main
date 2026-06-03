@@ -11,12 +11,12 @@
             /* Dynamic Radial Background: Deep Black that softens into a dark crimson glow */
             --bg-gradient: radial-gradient(circle at center, #250609 0%, #050505 80%);
             --bg-card: rgba(20, 20, 22, 0.75); /* Translucent sleek card to let the red glow show through */
-            --accent: #ff4757;        /* Spider-Man Crimson Red */
+            --accent: #bb1e25;        /* New Dark Metallic Crimson Red from Gemini_Generated_Image_bb5kvcbb5kvcbb5k.png */
             --accent-hover: #ff2a3a;
             --text-light: #f5f5f7;    /* Primary Text */
             --text-muted: #a1a1a6;    /* Secondary Text */
-            --web-color: rgba(255, 71, 87, 0.35); /* High Visibility Red Web Lines */
-            --border-red: rgba(255, 71, 87, 0.2);  /* Slightly sharper crimson borders */
+            --web-color: rgba(187, 30, 37, 0.35); /* High Visibility Crimson Web Lines */
+            --border-red: rgba(187, 30, 37, 0.2);  /* Crimson borders */
         }
 
         /* Smooth Scrolling */
@@ -90,30 +90,46 @@
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
             color: var(--text-light);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 12px;
-            text-transform: uppercase;
+            gap: 8px;
             letter-spacing: 1.5px;
         }
 
-        .logo span {
+        /* Logo Brand Colors inspired by text emblem layout */
+        .logo .brand-pider {
             color: var(--accent);
+            text-transform: uppercase;
+        }
+        
+        .logo .brand-web {
+            color: var(--text-light);
+            text-transform: uppercase;
         }
 
+        /* Main Big Logo SVG */
         .logo-svg {
-            width: 38px;
-            height: 38px;
+            width: 44px;
+            height: 44px;
             transition: transform 0.3s ease;
-            filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.5));
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.8));
+        }
+
+        /* Smaller Signature/Inline Icon matching the first logo in the text emblem */
+        .signature-svg {
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+            margin-right: 4px;
+            filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.6));
         }
 
         .logo:hover .logo-svg {
-            transform: scale(1.08) rotate(3deg);
+            transform: scale(1.08);
         }
 
         .nav-links a {
@@ -178,13 +194,13 @@
         .cta-button:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 71, 87, 0.6);
+            box-shadow: 0 5px 20px rgba(187, 30, 37, 0.6);
         }
 
         /* Pricing Section */
         .pricing-section {
             position: relative;
-            background: transparent; /* Allows main gradient background to show through fully */
+            background: transparent;
             padding: 100px 20px;
             margin-top: 40px;
             border-top: 1px solid var(--border-red);
@@ -241,7 +257,7 @@
 
         .price-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(255, 71, 87, 0.25);
+            box-shadow: 0 15px 35px rgba(187, 30, 37, 0.25);
             border-top-color: var(--text-light);
         }
 
@@ -304,16 +320,16 @@
         }
 
         .services-pitch {
-            background: rgba(255, 71, 87, 0.12);
+            background: rgba(187, 30, 37, 0.12);
             border-left: 4px solid var(--accent);
             padding: 20px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 50px;
             font-size: 16px;
             color: var(--text-light);
-            border-top: 1px solid rgba(255, 71, 87, 0.15);
-            border-right: 1px solid rgba(255, 71, 87, 0.15);
-            border-bottom: 1px solid rgba(255, 71, 87, 0.15);
+            border-top: 1px solid rgba(187, 30, 37, 0.15);
+            border-right: 1px solid rgba(187, 30, 37, 0.15);
+            border-bottom: 1px solid rgba(187, 30, 37, 0.15);
         }
 
         .services-grid {
@@ -336,7 +352,7 @@
             transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
             cursor: pointer;
-            min-height: 110px; /* Perfectly sizes cards when description is hidden */
+            min-height: 110px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -345,7 +361,7 @@
         .service-card h3 {
             font-size: 20px;
             color: var(--text-light);
-            margin-bottom: 0px; /* Dynamic margin managed by transitions */
+            margin-bottom: 0px;
             position: relative;
             z-index: 2;
             display: flex;
@@ -359,7 +375,7 @@
             font-weight: 700;
         }
 
-        /* Hidden Description Concept managed by Height, Opacity, and Transform */
+        /* Hidden Description managed by Height, Opacity, and Transform */
         .service-card p {
             color: var(--text-muted);
             font-size: 15px;
@@ -376,9 +392,9 @@
         /* Hover Reveal Mechanics */
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(255, 71, 87, 0.25);
-            border-color: rgba(255, 71, 87, 0.5);
-            background: rgba(30, 10, 12, 0.85); /* Gives the active card a red sub-hue */
+            box-shadow: 0 12px 30px rgba(187, 30, 37, 0.25);
+            border-color: rgba(187, 30, 37, 0.5);
+            background: rgba(35, 8, 10, 0.85); /* Dark crimson hue matching background */
         }
 
         .service-card:hover h3 {
@@ -387,7 +403,7 @@
         }
 
         .service-card:hover p {
-            max-height: 200px; /* Allows full description visibility safely */
+            max-height: 200px;
             opacity: 1;
             transform: translateY(0);
             margin-top: 5px;
@@ -431,7 +447,7 @@
 
         .contact-form input:focus, .contact-form textarea:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.35);
+            box-shadow: 0 0 0 3px rgba(187, 30, 37, 0.35);
         }
 
         .contact-form button {
@@ -466,7 +482,6 @@
             .pricing-container { grid-template-columns: 1fr; gap: 30px; }
             .price-card { padding: 35px 20px; }
             .web-corner-tl, .web-corner-br { width: 120px; height: 120px; }
-            /* On mobile screen view, reveal descriptions natively to maintain premium touch ergonomics */
             .service-card p { max-height: 200px; opacity: 1; transform: translateY(0); margin-top: 10px; }
             .service-card h3 { margin-bottom: 10px; }
         }
@@ -474,14 +489,23 @@
 </head>
 <body>
 
+    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
+                <!-- Replicated Main Red Wide-Orbital Logo from the center of Gemini_Generated_Image_bb5kvcbb5kvcbb5k.png -->
                 <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M63 36 C58 27, 42 27, 37 36 C31 46, 69 54, 63 64 C58 73, 42 73, 37 64" stroke="#f5f5f7" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <ellipse cx="50" cy="50" rx="45" ry="16" stroke="#ff4757" stroke-width="5" transform="rotate(-6 50 50)"/>
+                    <path d="M66 38 C60 25, 40 25, 34 38 C26 50, 74 50, 66 62 C60 75, 40 75, 34 62" stroke="#bb1e25" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <ellipse cx="50" cy="50" rx="48" ry="14" stroke="#bb1e25" stroke-width="5.5"/>
                 </svg>
-                Spider<span>Web</span>
+                
+                <!-- Signature Logo Arrangement inspired directly by the first inline logo configuration -->
+                <span class="brand-pider">
+                    <!-- Miniature signature icon placement prefixing the typography -->
+                    <svg class="signature-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M66 38 C60 25, 40 25, 34 38 C26 50, 74 50, 66 62 C60 75, 40 75, 34 62" stroke="#bb1e25" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <ellipse cx="50" cy="50" rx="48" ry="14" stroke="#bb1e25" stroke-width="5.5"/>
+                    </svg>pider</span><span class="brand-web">Web</span>
             </a>
             <nav class="nav-links">
                 <a href="#services">SpiderWeb Services</a>
@@ -491,6 +515,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
@@ -500,47 +525,55 @@
         <a href="#contact" class="cta-button">Get Started Today</a>
     </section>
 
+    <!-- Services Section -->
     <section class="services-section" id="services">
         <h2 class="section-title">SpiderWeb Services</h2>
         <p class="section-subtitle">We design and launch premium, high-converting digital storefronts tailored specifically to get real customers through your doors. Hover over each service to learn more.</p>
 
+        <!-- Dynamic Pitch Hook -->
         <div class="services-pitch">
             <strong>💡 The SpiderWeb Advantage:</strong> Local business owners don't just need lines of code—they need more footsteps and orders. We architect modern web infrastructure structured exclusively to drive local visibility and conversions from day one.
         </div>
 
         <div class="services-grid">
+            <!-- Service 1 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.3;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>1.</span> Custom Restaurant & Cafe Designs</h3>
                 <p>Tailor-made interfaces engineered to highlight your culinary aesthetic. We build sleek, interactive digital menus, integrate smooth reservation prompts, and display eye-catching high-resolution photo galleries of your spaces.</p>
             </div>
 
+            <!-- Service 2 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.3;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>2.</span> Local SEO & Discovery Optimization</h3>
                 <p>Make sure you stand out exactly when customers are hungry. We fully optimize your web properties to rank dynamically on Google Local Search results and synchronize map markers to guide foot traffic straight to your counters.</p>
             </div>
 
+            <!-- Service 3 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.3;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>3.</span> Mobile-First Responsive Engineering</h3>
                 <p>Over 70% of local diners look up coffee shops and fast food menus directly from their phones while on the move. Our creations feature flawless performance, responsive layouts, and lightning-fast loading across all mobile screen sizes.</p>
             </div>
 
+            <!-- Service 4 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.3;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>4.</span> High-Performance Speed Integration</h3>
                 <p>A slow website loses customers before they even look at your prices. We configure lightweight code architectures and advanced image compression tactics to keep your site rendering within microseconds.</p>
             </div>
 
+            <!-- Service 5 -->
             <div class="service-card">
-                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.3;"></div>
+                <div class="web-corner-tl" style="width:70px; height:70px; opacity: 0.2;"></div>
                 <h3><span>5.</span> Managed Maintenance & Hosting</h3>
                 <p>Run your business hands-free while we manage your technical architecture. Our active workflows cover secure hosting administration, periodic site file backups, professional custom email systems, and regular core system updates.</p>
             </div>
         </div>
     </section>
 
+    <!-- Pricing Section -->
     <section class="pricing-section" id="pricing">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
@@ -549,6 +582,7 @@
         <p class="section-subtitle">Choose an annual digital plan aligned directly with your preferred service tiers and branding needs.</p>
         
         <div class="pricing-container">
+            <!-- Starter Plan -->
             <div class="price-card">
                 <div class="web-corner-tl" style="width:100px; height:100px;"></div>
                 <div>
@@ -564,6 +598,7 @@
                 <a href="#contact" class="cta-button">Choose Starter</a>
             </div>
 
+            <!-- Premium Plan -->
             <div class="price-card premium">
                 <div class="web-corner-tl" style="width:100px; height:100px;"></div>
                 <div>
@@ -581,6 +616,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="web-corner-tl"></div>
         <div class="web-corner-br"></div>
@@ -595,6 +631,7 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 SpiderWeb. All rights reserved.</p>
     </footer>
