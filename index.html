@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpiderWeb | Premium Websites for Local Businesses</title>
     <meta name="description" content="SpiderWeb builds stunning, fast, mobile-first websites for local businesses, cafes, restaurants, and corporates. Based in Addis Ababa.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕸️</text></svg>">
+    <link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAlADQDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAIFAQQGAwj/xAArEAABBAECBQMDBQAAAAAAAAABAAIDBBEFEgYTISIxQVGBFjKRYXGhwfD/xAAaAQACAwEBAAAAAAAAAAAAAAABAwIEBQAG/8QAJhEAAQMDAwIHAAAAAAAAAAAAAQACEQMEMRJBYSFxBRNRYpGh0f/aAAwDAQACEQMRAD8A+PERSa1CVICVgArO1Xel8OancfHmAwRPcBzJe38A9T8K7l0HhiLNaTWHtsA7S7cMA/qMf2kuuGNMZ7LXt/BbmszXAaPcdM9pXEbSsLobHD8QmfFBrOmyOacYdIWEn5GP5VVqVC1Qn5NuExuIyPUOHuCOhCm2o12Cqlewr0BL29PXI+QtNEKJipoPK6HhJmRbfWbE/UWMaarZMe/cQD0LgMYXPDyvVjsHIOEt7dTYVqzrihVFQiY/MjkZHKuZIdbffZJPFeNrf2Oe12Qc9MZV1E6LW3itqlGaC79otRRHqfHeP98Lnq2tarAAI9QsgDwDISPwVcfWuq8jl7K2/GOZsOf3xnCrVGVDgBegsruzbq8x7oOQQHA/eeei1ZuHLkMzxblr1YWuI50sgAcPdo8lamvW60kFSjTe+WGo1wErxgvLjk4HoPYLRtWJZ5XSzSOkkcclzjklaz3JzWGQXFZVxd0g1zKDYDsyZMTMbAbbTyou8osInLLlEBRFxQUgSpbjhEQUgVEuKiiIoFEREUF//9k=">
     <style>
         :root {
             --primary:       #050505;
@@ -190,9 +190,64 @@
         .footer-col ul a:hover { color:var(--accent); }
         .footer-bottom { border-top:1px solid rgba(255,255,255,0.05); padding-top:20px; max-width:1160px; margin:0 auto; display:flex; justify-content:space-between; font-size:12px; color:#333; flex-wrap:wrap; gap:8px; }
         @media(max-width:768px) { .footer-inner { grid-template-columns:1fr; } .footer-bottom { flex-direction:column; text-align:center; } .section-inner { padding:60px 20px; } }
+
+        /* SPLASH SCREEN */
+        #splash {
+            position: fixed; inset: 0; z-index: 9999;
+            background: #050505;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            gap: 20px;
+            animation: splashFade 0.6s ease 2.2s forwards;
+        }
+        @keyframes splashFade {
+            to { opacity: 0; pointer-events: none; visibility: hidden; }
+        }
+        #splash img {
+            width: 120px; height: 120px; object-fit: contain;
+            animation: splashPop 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.3s both;
+            filter: drop-shadow(0 0 30px rgba(187,30,37,0.7));
+        }
+        @keyframes splashPop {
+            from { opacity: 0; transform: scale(0.4) rotate(-10deg); }
+            to   { opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+        #splash .splash-name {
+            font-family: "Courier New", monospace;
+            font-size: 1.6rem; font-weight: 700; letter-spacing: 4px;
+            animation: splashPop 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.55s both;
+        }
+        #splash .splash-name .brand-spider { color: #bb1e25; text-transform: uppercase; }
+        #splash .splash-name .brand-web   { color: #f5f5f7; text-transform: uppercase; }
+        #splash .splash-tagline {
+            font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
+            color: #555; animation: splashPop 0.6s ease 0.8s both;
+        }
+        #splash .splash-bar {
+            width: 180px; height: 2px; background: rgba(187,30,37,0.2);
+            border-radius: 2px; overflow: hidden;
+            animation: splashPop 0.5s ease 0.9s both;
+        }
+        #splash .splash-bar-fill {
+            height: 100%; background: #bb1e25;
+            animation: barGrow 1.5s ease 1s forwards;
+            width: 0;
+        }
+        @keyframes barGrow { to { width: 100%; } }
     </style>
 </head>
 <body>
+
+    <!-- SPLASH SCREEN -->
+    <div id="splash">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAlADQDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAIFAQQGAwj/xAArEAABBAECBQMDBQAAAAAAAAABAAIDBBEFEgYTISIxQVGBFjKRYXGhwfD/xAAaAQACAwEBAAAAAAAAAAAAAAABAwIEBQAG/8QAJhEAAQMDAwIHAAAAAAAAAAAAAQACEQMEMRJBYSFxBRNRYpGh0f/aAAwDAQACEQMRAD8A+PERSa1CVICVgArO1Xel8OancfHmAwRPcBzJe38A9T8K7l0HhiLNaTWHtsA7S7cMA/qMf2kuuGNMZ7LXt/BbmszXAaPcdM9pXEbSsLobHD8QmfFBrOmyOacYdIWEn5GP5VVqVC1Qn5NuExuIyPUOHuCOhCm2o12Cqlewr0BL29PXI+QtNEKJipoPK6HhJmRbfWbE/UWMaarZMe/cQD0LgMYXPDyvVjsHIOEt7dTYVqzrihVFQiY/MjkZHKuZIdbffZJPFeNrf2Oe12Qc9MZV1E6LW3itqlGaC79otRRHqfHeP98Lnq2tarAAI9QsgDwDISPwVcfWuq8jl7K2/GOZsOf3xnCrVGVDgBegsruzbq8x7oOQQHA/eeei1ZuHLkMzxblr1YWuI50sgAcPdo8lamvW60kFSjTe+WGo1wErxgvLjk4HoPYLRtWJZ5XSzSOkkcclzjklaz3JzWGQXFZVxd0g1zKDYDsyZMTMbAbbTyou8osInLLlEBRFxQUgSpbjhEQUgVEuKiiIoFEREUF//9k=" alt="SpiderWeb Logo">
+        <div class="splash-name">
+            <span class="brand-spider">Spider</span><span class="brand-web">Web</span>
+        </div>
+        <div class="splash-tagline">Premium Web Development</div>
+        <div class="splash-bar"><div class="splash-bar-fill"></div></div>
+    </div>
+
 
     <header>
         <div class="nav-container">
@@ -346,7 +401,7 @@
                             <li>Basic Scroll Animations</li>
                         </ul>
                     </div>
-                    <a href="https://t.me/Amanu2007" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
+                    <a href="https://t.me/Spiderwebhst" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
                 </div>
                 <div class="price-card premium reveal reveal-delay-2">
                     <div class="price-badge">Most Popular</div>
@@ -361,7 +416,7 @@
                             <li>Custom Contact Form Integration</li>
                         </ul>
                     </div>
-                    <a href="https://t.me/Amanu2007" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
+                    <a href="https://t.me/Spiderwebhst" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
                 </div>
                 <div class="price-card reveal reveal-delay-3">
                     <div>
@@ -375,7 +430,7 @@
                             <li>Ongoing Maintenance Plan</li>
                         </ul>
                     </div>
-                    <a href="https://t.me/Amanu2007" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
+                    <a href="https://t.me/Spiderwebhst" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
                 </div>
             </div>
         </div>
@@ -426,7 +481,7 @@
                         <span class="contact-detail-icon">✈️</span>
                         <div class="contact-detail-text">
                             <strong>Telegram</strong>
-                            <a href="https://t.me/Amanu2007" target="_blank">@Amanu2007</a>
+                            <a href="https://t.me/Spiderwebhst" target="_blank">@Spiderwebhst</a>
                         </div>
                     </div>
                     <div class="contact-detail">
@@ -489,7 +544,7 @@
             <div class="footer-col">
                 <h5>Contact</h5>
                 <ul>
-                    <li><a href="https://t.me/Amanu2007" target="_blank">Telegram: @Amanu2007</a></li>
+                    <li><a href="https://t.me/Spiderwebhst" target="_blank">Telegram: @Spiderwebhst</a></li>
                     <li><a href="#contact">Send a Message</a></li>
                     <li><a href="https://spiderweb.lol/" target="_blank">spiderweb.lol</a></li>
                 </ul>
