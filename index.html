@@ -4,572 +4,467 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpiderWeb | Premium Websites for Local Businesses</title>
-    <meta name="description" content="SpiderWeb builds stunning, fast, mobile-first websites for local businesses, cafes, restaurants, and corporates. Based in Addis Ababa.">
-    <link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAlADQDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAIFAQQGAwj/xAArEAABBAECBQMDBQAAAAAAAAABAAIDBBEFEgYTISIxQVGBFjKRYXGhwfD/xAAaAQACAwEBAAAAAAAAAAAAAAABAwIEBQAG/8QAJhEAAQMDAwIHAAAAAAAAAAAAAQACEQMEMRJBYSFxBRNRYpGh0f/aAAwDAQACEQMRAD8A+PERSa1CVICVgArO1Xel8OancfHmAwRPcBzJe38A9T8K7l0HhiLNaTWHtsA7S7cMA/qMf2kuuGNMZ7LXt/BbmszXAaPcdM9pXEbSsLobHD8QmfFBrOmyOacYdIWEn5GP5VVqVC1Qn5NuExuIyPUOHuCOhCm2o12Cqlewr0BL29PXI+QtNEKJipoPK6HhJmRbfWbE/UWMaarZMe/cQD0LgMYXPDyvVjsHIOEt7dTYVqzrihVFQiY/MjkZHKuZIdbffZJPFeNrf2Oe12Qc9MZV1E6LW3itqlGaC79otRRHqfHeP98Lnq2tarAAI9QsgDwDISPwVcfWuq8jl7K2/GOZsOf3xnCrVGVDgBegsruzbq8x7oOQQHA/eeei1ZuHLkMzxblr1YWuI50sgAcPdo8lamvW60kFSjTe+WGo1wErxgvLjk4HoPYLRtWJZ5XSzSOkkcclzjklaz3JzWGQXFZVxd0g1zKDYDsyZMTMbAbbTyou8osInLLlEBRFxQUgSpbjhEQUgVEuKiiIoFEREUF//9k=">
+    <meta name="description" content="Stunning, fast, and mobile-first websites for local businesses in Addis Ababa. Built to bring real customers through your doors.">
+    
+    <!-- SEO Canonical Tag for spiderweb.lol -->
+    <link rel="canonical" href="https://spiderweb.lol/" />
+    
     <style>
         :root {
-            --primary:       #050505;
-            --bg-deep:       radial-gradient(circle at 30% 20%, #1a0205 0%, #050505 70%);
-            --bg-card:       rgba(18, 5, 7, 0.8);
-            --accent:        #bb1e25;
-            --accent-hover:  #e02530;
-            --accent-glow:   rgba(187, 30, 37, 0.3);
-            --text-light:    #f5f5f7;
-            --text-muted:    #9a9a9f;
-            --web-color:     rgba(187, 30, 37, 0.3);
-            --border-red:    rgba(187, 30, 37, 0.18);
-            --border-subtle: rgba(255,255,255,0.06);
+            --bg-color: #09090b;
+            --card-bg: #18181b;
+            --text-main: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #a855f7;
+            --accent-hover: #9333ea;
+            --border: #27272a;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         html { scroll-behavior: smooth; }
-        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; font-family:'Courier New',Courier,monospace; }
 
         body {
-            color: var(--text-light);
-            background: var(--bg-deep);
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 20% 0%, rgba(168, 85, 247, 0.08) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, rgba(168, 85, 247, 0.05) 0px, transparent 50%);
             background-attachment: fixed;
-            line-height: 1.7;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
+            color: var(--text-main);
+            line-height: 1.6;
         }
 
-        /* REVEAL */
-        .reveal { opacity:0; transform:translateY(28px) scale(0.98); transition:opacity 0.65s cubic-bezier(0.25,1,0.5,1), transform 0.65s cubic-bezier(0.25,1,0.5,1); }
-        .reveal.active { opacity:1; transform:translateY(0) scale(1); }
-        .reveal-delay-1 { transition-delay:0.08s; }
-        .reveal-delay-2 { transition-delay:0.16s; }
-        .reveal-delay-3 { transition-delay:0.24s; }
-        .reveal-delay-4 { transition-delay:0.32s; }
-        .reveal-delay-5 { transition-delay:0.40s; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
 
-        /* WEB CORNERS */
-        .web-corner-tl, .web-corner-br { position:absolute; width:200px; height:200px; pointer-events:none; z-index:1; }
-        .web-corner-tl { top:0; left:0;
-            background: radial-gradient(circle at 0 0, transparent 25px, var(--web-color) 26px, transparent 28px, transparent 55px, var(--web-color) 56px, transparent 58px, transparent 90px, var(--web-color) 91px, transparent 93px, transparent 130px, var(--web-color) 131px, transparent 133px, transparent 170px, var(--web-color) 171px, transparent 173px),
-                linear-gradient(to bottom right, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
-                linear-gradient(18deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
-                linear-gradient(72deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
-                linear-gradient(45deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%);
+        /* Utility */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 100px 0; }
+        .section-sub { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 10px; font-weight: 600; }
+        h2 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 800; }
+        .section-desc { color: var(--text-muted); max-width: 600px; margin-bottom: 50px; font-size: 1.1rem; }
+
+        /* Header */
+        header {
+            position: fixed; top: 0; width: 100%; 
+            background: rgba(9, 9, 11, 0.8); 
+            backdrop-filter: blur(12px); 
+            z-index: 1000; 
+            border-bottom: 1px solid var(--border);
         }
-        .web-corner-br { bottom:0; right:0;
-            background: radial-gradient(circle at 100% 100%, transparent 25px, var(--web-color) 26px, transparent 28px, transparent 55px, var(--web-color) 56px, transparent 58px, transparent 90px, var(--web-color) 91px, transparent 93px, transparent 130px, var(--web-color) 131px, transparent 133px, transparent 170px, var(--web-color) 171px, transparent 173px),
-                linear-gradient(to top left, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
-                linear-gradient(198deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
-                linear-gradient(252deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%),
-                linear-gradient(225deg, transparent 49.5%, var(--web-color) 50%, transparent 50.5%);
+        header .container { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; }
+        .logo span { color: var(--accent); }
+        nav ul { display: flex; gap: 30px; list-style: none; }
+        nav a { color: var(--text-muted); transition: color 0.3s; font-weight: 500; }
+        nav a:hover { color: var(--text-main); }
+        .btn-nav { background: var(--accent); color: white !important; padding: 10px 20px; border-radius: 8px; transition: background 0.3s; }
+        .btn-nav:hover { background: var(--accent-hover); }
+
+        /* Hero */
+        .hero { padding-top: 160px; text-align: center; }
+        .hero .subtitle { color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem; }
+        .hero h1 { 
+            font-size: 4.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #a855f7); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
         }
+        .hero .desc { color: var(--text-muted); max-width: 700px; margin: 0 auto 40px; font-size: 1.2rem; }
+        .cta-group { display: flex; gap: 20px; justify-content: center; margin-bottom: 80px; flex-wrap: wrap; }
+        .btn-primary { background: var(--accent); color: white; padding: 16px 32px; border-radius: 8px; font-weight: 600; transition: background 0.3s; font-size: 1.05rem; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-secondary { border: 1px solid var(--border); padding: 16px 32px; border-radius: 8px; color: var(--text-main); transition: border-color 0.3s; font-size: 1.05rem; }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-        /* NAVBAR */
-        header { position:sticky; top:0; z-index:1000; background:rgba(5,5,5,0.92); backdrop-filter:blur(16px); border-bottom:1px solid var(--border-red); }
-        .nav-container { max-width:1200px; margin:0 auto; padding:14px 28px; display:flex; justify-content:space-between; align-items:center; }
-        .logo { font-size:20px; font-weight:700; color:var(--text-light); text-decoration:none; display:flex; align-items:center; gap:10px; letter-spacing:1px; }
-        .logo-svg { width:34px; height:34px; transition:transform 0.3s; filter:drop-shadow(0 2px 6px rgba(187,30,37,0.5)); }
-        .logo:hover .logo-svg { transform:scale(1.08) rotate(5deg); }
-        .brand-spider { color:var(--accent); text-transform:uppercase; }
-        .brand-web { color:var(--text-light); text-transform:uppercase; }
-        .nav-links { display:flex; align-items:center; gap:28px; }
-        .nav-links a { text-decoration:none; color:var(--text-muted); font-size:14px; font-weight:600; transition:color 0.2s; letter-spacing:0.5px; }
-        .nav-links a:hover { color:var(--accent); }
-        .nav-cta { background:var(--accent) !important; color:var(--text-light) !important; padding:9px 20px; border-radius:4px; font-size:13px !important; transition:background 0.2s, box-shadow 0.2s !important; }
-        .nav-cta:hover { background:var(--accent-hover) !important; box-shadow:0 0 18px var(--accent-glow) !important; }
-        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
-        .hamburger span { width:24px; height:2px; background:var(--text-light); transition:0.3s; }
-        @media(max-width:768px) {
-            .hamburger { display:flex; }
-            .nav-links { display:none; flex-direction:column; position:absolute; top:62px; left:0; width:100%; background:rgba(5,5,5,0.97); padding:20px; gap:16px; border-bottom:1px solid var(--border-red); }
-            .nav-links.open { display:flex; }
+        .stats { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; border-top: 1px solid var(--border); padding-top: 40px; }
+        .stat { text-align: center; }
+        .stat span { display: block; font-size: 2.5rem; font-weight: 800; color: var(--accent); margin-bottom: 5px; }
+        .stat p { color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Services */
+        .services { text-align: center; }
+        .advantage { 
+            background: var(--card-bg); border-left: 4px solid var(--accent); padding: 25px; margin: 40px auto; max-width: 800px; 
+            text-align: left; color: var(--text-muted); font-style: italic; border-radius: 0 8px 8px 0;
         }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; text-align: left; }
+        .service-card { background: var(--card-bg); padding: 35px; border-radius: 12px; border: 1px solid var(--border); transition: transform 0.3s, border-color 0.3s; }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .service-num { color: var(--accent); font-size: 0.9rem; font-weight: 600; display: block; margin-bottom: 10px; }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.3rem; }
+        .service-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-        /* HERO */
-        .hero { position:relative; overflow:hidden; max-width:1160px; margin:24px auto; padding:100px 32px; text-align:center; background:var(--bg-card); backdrop-filter:blur(6px); border-radius:12px; border:1px solid var(--border-red); box-shadow:0 0 80px rgba(187,30,37,0.08), 0 16px 40px rgba(0,0,0,0.6); animation:heroIn 1s cubic-bezier(0.16,1,0.3,1) forwards; }
-        @keyframes heroIn { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-        .hero-eyebrow { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--accent); margin-bottom:20px; display:block; }
-        .hero h1 { font-size:clamp(2rem,5vw,3.4rem); color:var(--text-light); margin-bottom:20px; line-height:1.2; position:relative; z-index:2; }
-        .hero h1 em { color:var(--accent); font-style:normal; }
-        .hero p { font-size:16px; color:var(--text-muted); max-width:640px; margin:0 auto 36px; position:relative; z-index:2; }
-        .hero-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative; z-index:2; }
+        /* Portfolio */
+        .portfolio { text-align: center; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .portfolio-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); text-align: left; transition: transform 0.3s, border-color 0.3s; }
+        .portfolio-card:hover { transform: translateY(-8px); border-color: var(--accent); }
+        .portfolio-card img { width: 100%; height: 220px; object-fit: cover; }
+        .portfolio-card .content { padding: 25px; }
+        .category { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+        .portfolio-card h3 { margin: 10px 0 15px; font-size: 1.5rem; }
+        .portfolio-card p { color: var(--text-muted); margin-bottom: 25px; font-size: 0.95rem; }
+        .btn-card { display: inline-block; color: var(--accent); font-weight: 600; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+        .btn-card:hover { border-color: var(--accent); }
 
-        /* BUTTONS */
-        .btn-primary { display:inline-block; background:var(--accent); color:var(--text-light); text-decoration:none; padding:13px 30px; border-radius:4px; font-weight:700; font-size:14px; letter-spacing:0.5px; transition:all 0.25s; }
-        .btn-primary:hover { background:var(--accent-hover); box-shadow:0 0 24px var(--accent-glow); transform:translateY(-2px); }
-        .btn-ghost { display:inline-block; color:var(--text-muted); text-decoration:none; padding:13px 30px; border-radius:4px; font-weight:600; font-size:14px; border:1px solid var(--border-subtle); transition:all 0.25s; }
-        .btn-ghost:hover { border-color:var(--accent); color:var(--accent); }
+        /* Pricing */
+        .pricing { text-align: center; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; align-items: center; }
+        .pricing-card { background: var(--card-bg); padding: 40px 30px; border-radius: 12px; border: 1px solid var(--border); position: relative; text-align: left; transition: transform 0.3s; }
+        .pricing-card:hover { transform: translateY(-5px); }
+        .pricing-card.popular { border-color: var(--accent); transform: scale(1.05); box-shadow: 0 0 30px rgba(168, 85, 247, 0.15); }
+        .pricing-card.popular:hover { transform: scale(1.05) translateY(-5px); }
+        .badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 6px 18px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .pricing-card h3 { font-size: 1.5rem; margin-bottom: 25px; }
+        .pricing-card ul { list-style: none; margin-bottom: 35px; }
+        .pricing-card li { padding: 12px 0; border-bottom: 1px solid var(--border); color: var(--text-muted); font-size: 0.95rem; }
+        .btn-price { display: block; text-align: center; background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 14px; border-radius: 8px; font-weight: 600; transition: all 0.3s; }
+        .btn-price:hover { background: var(--accent); color: white; }
+        .pricing-card.popular .btn-price { background: var(--accent); color: white; }
+        .pricing-card.popular .btn-price:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
 
-        /* STATS */
-        .stats-strip { max-width:1160px; margin:0 auto 60px; display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--border-red); border-radius:0 0 8px 8px; overflow:hidden; }
-        .stat-item { padding:28px 20px; text-align:center; background:rgba(10,3,4,0.7); border-right:1px solid var(--border-red); }
-        .stat-item:last-child { border-right:none; }
-        .stat-item strong { display:block; font-size:2rem; color:var(--accent); line-height:1; margin-bottom:6px; }
-        .stat-item span { font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; }
-        @media(max-width:600px) { .stats-strip { grid-template-columns:repeat(2,1fr); } }
+        /* Why Us */
+        .why-us { text-align: center; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; text-align: left; }
+        .feature-card { background: var(--card-bg); padding: 35px; border-radius: 12px; border: 1px solid var(--border); transition: border-color 0.3s; }
+        .feature-card:hover { border-color: var(--accent); }
+        .icon { font-size: 2.5rem; display: block; margin-bottom: 20px; }
+        .feature-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
+        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-        /* SECTION COMMONS */
-        section { position:relative; overflow:hidden; }
-        .section-inner { max-width:1160px; margin:0 auto; padding:90px 28px; }
-        .section-label { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:10px; }
-        .section-title { font-size:clamp(1.7rem,3.5vw,2.4rem); color:var(--text-light); margin-bottom:14px; line-height:1.2; }
-        .section-sub { font-size:15px; color:var(--text-muted); max-width:580px; margin-bottom:48px; }
-
-        /* SERVICES */
-        .services-section { background:rgba(8,2,3,0.5); border-top:1px solid var(--border-red); border-bottom:1px solid var(--border-red); }
-        .services-pitch { background:rgba(187,30,37,0.07); border:1px solid var(--border-red); border-left:3px solid var(--accent); padding:18px 22px; border-radius:4px; font-size:14px; color:var(--text-muted); margin-bottom:40px; line-height:1.75; }
-        .services-pitch strong { color:var(--accent); }
-        .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
-        .service-card { background:var(--bg-card); border:1px solid var(--border-red); border-radius:8px; padding:30px 26px; transition:border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
-        .service-card:hover { border-color:var(--accent); transform:translateY(-5px); box-shadow:0 12px 40px rgba(187,30,37,0.15); }
-        .service-num { font-size:11px; letter-spacing:0.2em; color:var(--accent); text-transform:uppercase; margin-bottom:12px; display:block; }
-        .service-icon { font-size:1.8rem; margin-bottom:14px; display:block; }
-        .service-card h3 { font-size:1.05rem; color:var(--text-light); margin-bottom:12px; }
-        .service-card p { font-size:13.5px; color:var(--text-muted); line-height:1.8; }
-
-        /* PORTFOLIO */
-        .work-section { background:transparent; }
-        .work-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
-        .work-card { background:var(--bg-card); border:1px solid var(--border-red); border-radius:8px; overflow:hidden; transition:border-color 0.3s, transform 0.3s; }
-        .work-card:hover { border-color:var(--accent); transform:translateY(-4px); }
-        .work-img { width:100%; height:200px; object-fit:cover; display:block; filter:saturate(0.7) brightness(0.85); transition:filter 0.3s; }
-        .work-card:hover .work-img { filter:saturate(1) brightness(0.95); }
-        .work-body { padding:22px; }
-        .work-tag { font-size:11px; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px; }
-        .work-card h3 { font-size:1rem; color:var(--text-light); margin-bottom:8px; }
-        .work-card p { font-size:13px; color:var(--text-muted); line-height:1.75; }
-        .work-link { display:inline-block; margin-top:14px; font-size:13px; color:var(--accent); text-decoration:none; transition:color 0.2s; }
-        .work-link:hover { color:var(--accent-hover); }
-
-        /* PRICING */
-        .pricing-section { background:rgba(8,2,3,0.5); border-top:1px solid var(--border-red); border-bottom:1px solid var(--border-red); }
-        .pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:960px; margin:0 auto; }
-        .price-card { background:var(--bg-card); border:1px solid var(--border-red); border-radius:8px; padding:36px 30px; display:flex; flex-direction:column; justify-content:space-between; transition:border-color 0.3s, box-shadow 0.3s; position:relative; }
-        .price-card:hover { border-color:var(--accent); box-shadow:0 0 30px rgba(187,30,37,0.12); }
-        .price-card.premium { border-color:var(--accent); box-shadow:0 0 40px rgba(187,30,37,0.18); }
-        .price-badge { position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--accent); color:#fff; font-size:11px; padding:4px 16px; border-radius:40px; letter-spacing:0.1em; text-transform:uppercase; white-space:nowrap; }
-        .price-card h3 { font-size:1.3rem; color:var(--text-light); margin-bottom:24px; }
-        .features-list { list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:32px; }
-        .features-list li { font-size:13.5px; color:var(--text-muted); padding-left:20px; position:relative; }
-        .features-list li::before { content:''; position:absolute; left:0; top:0.6em; width:7px; height:7px; background:var(--accent); border-radius:50%; }
-        .price-inquiry-link { display:block; text-align:center; background:transparent; border:1px solid var(--accent); color:var(--accent); padding:12px; border-radius:4px; text-decoration:none; font-size:13px; font-weight:700; transition:all 0.25s; }
-        .price-inquiry-link:hover { background:var(--accent); color:#fff; }
-        .price-card.premium .price-inquiry-link { background:var(--accent); color:#fff; }
-        .price-card.premium .price-inquiry-link:hover { background:var(--accent-hover); }
-
-        /* WHY US */
-        .why-section { background:transparent; }
-        .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-        .why-item { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:8px; padding:28px 22px; transition:border-color 0.3s; }
-        .why-item:hover { border-color:var(--border-red); }
-        .why-icon { font-size:1.8rem; margin-bottom:14px; display:block; }
-        .why-item h4 { font-size:0.95rem; color:var(--text-light); margin-bottom:8px; }
-        .why-item p { font-size:13px; color:var(--text-muted); line-height:1.75; }
-
-        /* CONTACT */
-        .contact-section { background:rgba(8,2,3,0.5); border-top:1px solid var(--border-red); }
-        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
-        .contact-info h2 { font-size:1.8rem; color:var(--text-light); margin-bottom:16px; line-height:1.2; }
-        .contact-info > p { font-size:14px; color:var(--text-muted); margin-bottom:28px; }
-        .contact-detail { display:flex; align-items:flex-start; gap:12px; margin-bottom:18px; }
-        .contact-detail-icon { font-size:1.1rem; margin-top:2px; }
-        .contact-detail-text { font-size:13.5px; color:var(--text-muted); }
-        .contact-detail-text strong { display:block; color:var(--text-light); font-size:11px; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:3px; }
-        .contact-detail-text a { color:var(--accent); text-decoration:none; }
-        .contact-detail-text a:hover { color:var(--accent-hover); }
-        .contact-form { display:flex; flex-direction:column; gap:14px; }
-        .contact-form input, .contact-form textarea, .contact-form select { padding:13px 16px; border-radius:6px; border:1px solid var(--border-subtle); background:rgba(5,5,5,0.85); color:var(--text-light); width:100%; outline:none; font-size:13.5px; font-family:'Courier New',monospace; transition:border-color 0.25s, box-shadow 0.25s; }
-        .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(187,30,37,0.2); }
-        .contact-form select option { background:#0a0a0a; }
-        .contact-form button { background:var(--accent); color:var(--text-light); border:none; padding:14px; border-radius:6px; font-weight:700; font-size:14px; cursor:pointer; font-family:'Courier New',monospace; transition:all 0.25s; letter-spacing:0.5px; }
-        .contact-form button:hover { background:var(--accent-hover); box-shadow:0 0 20px var(--accent-glow); }
-        @media(max-width:768px) { .contact-grid { grid-template-columns:1fr; gap:40px; } }
-
-        /* FOOTER */
-        footer { background:#020202; border-top:1px solid var(--border-red); padding:52px 28px 28px; }
-        .footer-inner { max-width:1160px; margin:0 auto 40px; display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; }
-        .footer-brand p { font-size:13px; color:#444; max-width:260px; margin-top:10px; line-height:1.7; }
-        .footer-col h5 { font-size:11px; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:14px; }
-        .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
-        .footer-col ul a { font-size:13px; color:#444; text-decoration:none; transition:color 0.2s; }
-        .footer-col ul a:hover { color:var(--accent); }
-        .footer-bottom { border-top:1px solid rgba(255,255,255,0.05); padding-top:20px; max-width:1160px; margin:0 auto; display:flex; justify-content:space-between; font-size:12px; color:#333; flex-wrap:wrap; gap:8px; }
-        @media(max-width:768px) { .footer-inner { grid-template-columns:1fr; } .footer-bottom { flex-direction:column; text-align:center; } .section-inner { padding:60px 20px; } }
-
-        /* SPLASH SCREEN */
-        #splash {
-            position: fixed; inset: 0; z-index: 9999;
-            background: #050505;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            gap: 20px;
-            animation: splashFade 0.6s ease 2.2s forwards;
+        /* Contact */
+        .contact { display: flex; gap: 60px; flex-wrap: wrap; align-items: flex-start; }
+        .contact-info { flex: 1; min-width: 300px; }
+        .contact-info h2 { font-size: 3rem; line-height: 1.1; }
+        .contact-info > p { color: var(--text-muted); margin-top: 20px; font-size: 1.1rem; }
+        .contact-details { margin-top: 40px; }
+        .contact-details p { margin-bottom: 20px; color: var(--text-muted); font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
+        .contact-details a { color: var(--accent); font-weight: 500; }
+        
+        .contact-form { flex: 1.2; min-width: 320px; background: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid var(--border); }
+        .contact-form h3 { margin-bottom: 25px; font-size: 1.3rem; }
+        .radio-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
+        .radio-group label { display: flex; align-items: center; gap: 12px; color: var(--text-muted); cursor: pointer; transition: color 0.2s; }
+        .radio-group label:hover { color: var(--text-main); }
+        .radio-group input[type="radio"] { accent-color: var(--accent); width: 18px; height: 18px; }
+        .contact-form input, .contact-form textarea { 
+            width: 100%; padding: 14px; margin-bottom: 15px; background: var(--bg-color); border: 1px solid var(--border); 
+            border-radius: 8px; color: var(--text-main); font-family: inherit; font-size: 1rem; transition: border-color 0.3s;
         }
-        @keyframes splashFade {
-            to { opacity: 0; pointer-events: none; visibility: hidden; }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
+        .btn-submit { width: 100%; padding: 16px; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+        .btn-submit:hover { background: var(--accent-hover); }
+
+        /* Footer */
+        footer { background: #050505; padding: 80px 0 30px; border-top: 1px solid var(--border); margin-top: 50px; }
+        .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+        .footer-brand p { color: var(--text-muted); margin-top: 15px; max-width: 350px; }
+        .footer-links h4, .footer-contact h4 { margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; }
+        .footer-links ul, .footer-contact ul { list-style: none; }
+        .footer-links li, .footer-contact li { margin-bottom: 12px; }
+        .footer-links a, .footer-contact a { color: var(--text-muted); transition: color 0.3s; }
+        .footer-links a:hover, .footer-contact a:hover { color: var(--accent); }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+            .stats { gap: 30px; }
+            .stat span { font-size: 2rem; }
+            .pricing-card.popular { transform: scale(1); }
+            .pricing-card.popular:hover { transform: translateY(-5px); }
+            .contact { flex-direction: column; }
+            .contact-info h2 { font-size: 2.2rem; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .footer-brand p { margin: 15px auto; }
         }
-        #splash img {
-            width: 120px; height: 120px; object-fit: contain;
-            animation: splashPop 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.3s both;
-            filter: drop-shadow(0 0 30px rgba(187,30,37,0.7));
-        }
-        @keyframes splashPop {
-            from { opacity: 0; transform: scale(0.4) rotate(-10deg); }
-            to   { opacity: 1; transform: scale(1) rotate(0deg); }
-        }
-        #splash .splash-name {
-            font-family: "Courier New", monospace;
-            font-size: 1.6rem; font-weight: 700; letter-spacing: 4px;
-            animation: splashPop 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.55s both;
-        }
-        #splash .splash-name .brand-spider { color: #bb1e25; text-transform: uppercase; }
-        #splash .splash-name .brand-web   { color: #f5f5f7; text-transform: uppercase; }
-        #splash .splash-tagline {
-            font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
-            color: #555; animation: splashPop 0.6s ease 0.8s both;
-        }
-        #splash .splash-bar {
-            width: 180px; height: 2px; background: rgba(187,30,37,0.2);
-            border-radius: 2px; overflow: hidden;
-            animation: splashPop 0.5s ease 0.9s both;
-        }
-        #splash .splash-bar-fill {
-            height: 100%; background: #bb1e25;
-            animation: barGrow 1.5s ease 1s forwards;
-            width: 0;
-        }
-        @keyframes barGrow { to { width: 100%; } }
     </style>
 </head>
 <body>
 
-    <!-- SPLASH SCREEN -->
-    <div id="splash">
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAlADQDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAIFAQQGAwj/xAArEAABBAECBQMDBQAAAAAAAAABAAIDBBEFEgYTISIxQVGBFjKRYXGhwfD/xAAaAQACAwEBAAAAAAAAAAAAAAABAwIEBQAG/8QAJhEAAQMDAwIHAAAAAAAAAAAAAQACEQMEMRJBYSFxBRNRYpGh0f/aAAwDAQACEQMRAD8A+PERSa1CVICVgArO1Xel8OancfHmAwRPcBzJe38A9T8K7l0HhiLNaTWHtsA7S7cMA/qMf2kuuGNMZ7LXt/BbmszXAaPcdM9pXEbSsLobHD8QmfFBrOmyOacYdIWEn5GP5VVqVC1Qn5NuExuIyPUOHuCOhCm2o12Cqlewr0BL29PXI+QtNEKJipoPK6HhJmRbfWbE/UWMaarZMe/cQD0LgMYXPDyvVjsHIOEt7dTYVqzrihVFQiY/MjkZHKuZIdbffZJPFeNrf2Oe12Qc9MZV1E6LW3itqlGaC79otRRHqfHeP98Lnq2tarAAI9QsgDwDISPwVcfWuq8jl7K2/GOZsOf3xnCrVGVDgBegsruzbq8x7oOQQHA/eeei1ZuHLkMzxblr1YWuI50sgAcPdo8lamvW60kFSjTe+WGo1wErxgvLjk4HoPYLRtWJZ5XSzSOkkcclzjklaz3JzWGQXFZVxd0g1zKDYDsyZMTMbAbbTyou8osInLLlEBRFxQUgSpbjhEQUgVEuKiiIoFEREUF//9k=" alt="SpiderWeb Logo">
-        <div class="splash-name">
-            <span class="brand-spider">Spider</span><span class="brand-web">Web</span>
-        </div>
-        <div class="splash-tagline">Premium Web Development</div>
-        <div class="splash-bar"><div class="splash-bar-fill"></div></div>
-    </div>
-
-
+    <!-- Header -->
     <header>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M63 36 C58 27, 42 27, 37 36 C31 46, 69 54, 63 64 C58 73, 42 73, 37 64" stroke="#bb1e25" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <ellipse cx="50" cy="50" rx="45" ry="16" stroke="#bb1e25" stroke-width="5" transform="rotate(-6 50 50)"/>
-                </svg>
-                <span class="brand-spider">Spider</span><span class="brand-web">Web</span>
-            </a>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-            <nav class="nav-links" id="nav-links">
-                <a href="#services">Services</a>
-                <a href="#work">Our Work</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#why">Why Us</a>
-                <a href="#contact" class="nav-cta">Get Started</a>
+        <div class="container">
+            <a href="#" class="logo">Spider<span>Web</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#work">Our Work</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#why">Why Us</a></li>
+                    <li><a href="#contact" class="btn-nav">Get Started</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="web-corner-tl"></div>
-        <div class="web-corner-br"></div>
-        <span class="hero-eyebrow">Web Development &mdash; Addis Ababa &amp; Beyond</span>
-        <h1>We Weave <em>Perfect Websites</em><br>For Your Business</h1>
-        <p>Stunning, fast, and mobile-first websites for local businesses, cafes, restaurants, boutiques, and corporates &mdash; built to bring real customers through your doors.</p>
-        <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Get Started Today</a>
-            <a href="#work" class="btn-ghost">See Our Work</a>
+        <div class="container">
+            <p class="subtitle">Web Development — Addis Ababa & Beyond</p>
+            <h1>We Weave Perfect Websites<br>For Your Business</h1>
+            <p class="desc">Stunning, fast, and mobile-first websites for local businesses, cafes, restaurants, boutiques, and corporates — built to bring real customers through your doors.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn-primary">Get Started Today</a>
+                <a href="#work" class="btn-secondary">See Our Work</a>
+            </div>
+            <div class="stats">
+                <div class="stat"><span>4+</span><p>Sites Launched</p></div>
+                <div class="stat"><span>48hr</span><p>Avg. Delivery</p></div>
+                <div class="stat"><span>100%</span><p>Mobile-First</p></div>
+                <div class="stat"><span>∞</span><p>Spider Threads</p></div>
+            </div>
         </div>
     </section>
 
-    <!-- STATS -->
-    <div class="stats-strip reveal">
-        <div class="stat-item"><strong>3+</strong><span>Sites Launched</span></div>
-        <div class="stat-item"><strong>48hr</strong><span>Avg. Delivery</span></div>
-        <div class="stat-item"><strong>100%</strong><span>Mobile-First</span></div>
-        <div class="stat-item"><strong>&#8734;</strong><span>Spider Threads</span></div>
-    </div>
-
-    <!-- SERVICES -->
-    <section class="services-section" id="services">
-        <div class="section-inner">
-            <div class="web-corner-tl"></div>
-            <div class="web-corner-br"></div>
-            <span class="section-label reveal">What We Build</span>
-            <h2 class="section-title reveal">SpiderWeb Services</h2>
-            <p class="section-sub reveal">We design and launch premium, high-converting digital storefronts tailored to get real customers through your doors.</p>
-            <div class="services-pitch reveal">
-                <strong>&gt; The SpiderWeb Advantage:</strong> Local business owners don't just need lines of code &mdash; they need more footsteps and orders. We architect modern web infrastructure structured exclusively to drive local visibility and real conversions from day one.
-            </div>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <p class="section-sub">What We Build</p>
+            <h2>SpiderWeb Services</h2>
+            <p class="section-desc" style="margin-left: auto; margin-right: auto;">We design and launch premium, high-converting digital storefronts tailored to get real customers through your doors.</p>
+            
+            <blockquote class="advantage">
+                <strong>The SpiderWeb Advantage:</strong> Local business owners don't just need lines of code — they need more footsteps and orders. We architect modern web infrastructure structured exclusively to drive local visibility and real conversions from day one.
+            </blockquote>
+            
             <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1">
-                    <span class="service-icon">🍽️</span>
-                    <span class="service-num">Service 01</span>
-                    <h3>Custom Restaurant &amp; Cafe Designs</h3>
+                <div class="service-card">
+                    <span class="service-num">🍽️ Service 01</span>
+                    <h3>Custom Restaurant & Cafe Designs</h3>
                     <p>Tailor-made interfaces built to highlight your culinary aesthetic. Interactive digital menus, smooth reservation prompts, and eye-catching photo galleries that turn visitors into walk-ins.</p>
                 </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <span class="service-icon">📱</span>
-                    <span class="service-num">Service 02</span>
+                <div class="service-card">
+                    <span class="service-num">📱 Service 02</span>
                     <h3>Mobile-First Responsive Engineering</h3>
                     <p>Over 70% of local customers browse from their phones. Our builds feature flawless performance, responsive layouts, and lightning-fast loading across every screen size.</p>
                 </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <span class="service-icon">⚡</span>
-                    <span class="service-num">Service 03</span>
+                <div class="service-card">
+                    <span class="service-num">⚡ Service 03</span>
                     <h3>High-Performance Speed Integration</h3>
                     <p>A slow website loses customers before they see your prices. We configure lightweight code architectures and advanced compression to keep your site rendering within milliseconds.</p>
                 </div>
-                <div class="service-card reveal reveal-delay-4">
-                    <span class="service-icon">🛠️</span>
-                    <span class="service-num">Service 04</span>
-                    <h3>Managed Maintenance &amp; Hosting</h3>
-                    <p>Run your business hands-free. Secure hosting, backups, custom email systems, and regular core updates &mdash; all managed by us so you can focus on your customers.</p>
+                <div class="service-card">
+                    <span class="service-num">🛠️ Service 04</span>
+                    <h3>Managed Maintenance & Hosting</h3>
+                    <p>Run your business hands-free. Secure hosting, backups, custom email systems, and regular core updates — all managed by us so you can focus on your customers.</p>
                 </div>
-                <div class="service-card reveal reveal-delay-5">
-                    <span class="service-icon">🏢</span>
-                    <span class="service-num">Service 05</span>
-                    <h3>Corporate &amp; Enterprise Websites</h3>
+                <div class="service-card">
+                    <span class="service-num">🏢 Service 05</span>
+                    <h3>Corporate & Enterprise Websites</h3>
                     <p>Clean layouts, professional branding, and scalable structures designed to present large organisations with authority, optimal performance, and a polished interface.</p>
                 </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <span class="service-icon">🛍️</span>
-                    <span class="service-num">Service 06</span>
-                    <h3>Boutique &amp; Retail Storefronts</h3>
+                <div class="service-card">
+                    <span class="service-num">🛍️ Service 06</span>
+                    <h3>Boutique & Retail Storefronts</h3>
                     <p>Product showcases, inquiry forms, WhatsApp integration, and beautiful catalogue pages for clothing shops, importers, and retail businesses of every size.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- OUR WORK -->
-    <section class="work-section" id="work">
-        <div class="section-inner">
-            <span class="section-label reveal">Portfolio</span>
-            <h2 class="section-title reveal">Our Work</h2>
-            <p class="section-sub reveal">A selection of sites we have recently built for clients in Addis Ababa.</p>
-            <div class="work-grid">
-                <div class="work-card reveal reveal-delay-1">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Haqsec" class="work-img">
-                    <div class="work-body">
-                        <div class="work-tag">Security &amp; Cleaning</div>
+    <!-- Portfolio Section -->
+    <section id="work" class="portfolio">
+        <div class="container">
+            <p class="section-sub">Portfolio</p>
+            <h2>Our Work</h2>
+            <p class="section-desc" style="margin-left: auto; margin-right: auto;">A selection of sites we have recently built for clients in Addis Ababa.</p>
+            
+            <div class="portfolio-grid">
+                <!-- Haqsec -->
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Haqsec">
+                    <div class="content">
+                        <span class="category">Security & Cleaning</span>
                         <h3>Haqsec</h3>
                         <p>A professional corporate website for Haq Security and Cleaning Services, featuring service breakdowns, testimonials, and a contact form.</p>
-                        <a href="https://amanua11.github.io/Haqsecweb/" target="_blank" class="work-link">View Live Site &rarr;</a>
+                        <a href="https://amanua11.github.io/Haqsecweb/" target="_blank" rel="noopener noreferrer" class="btn-card">View Live Site →</a>
                     </div>
                 </div>
-                <div class="work-card reveal reveal-delay-2">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Blessing Collection" class="work-img">
-                    <div class="work-body">
-                        <div class="work-tag">Fashion &amp; Boutique</div>
+                
+                <!-- Blessing Collection -->
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Blessing Collection">
+                    <div class="content">
+                        <span class="category">Fashion & Boutique</span>
                         <h3>Blessing Collection</h3>
                         <p>A dark, premium boutique website for a Turkish clothing, cosmetics, and jewellery importer based in Addis Ababa.</p>
-                        <a href="https://amanua11.github.io/blessing_shop/" target="_blank" class="work-link">View Live Site &rarr;</a>
+                        <a href="https://amanua11.github.io/blessing_shop/" target="_blank" rel="noopener noreferrer" class="btn-card">View Live Site →</a>
                     </div>
                 </div>
-                <div class="work-card reveal reveal-delay-3">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Lidiya Cafe" class="work-img">
-                    <div class="work-body">
-                        <div class="work-tag">Cafe &amp; Restaurant</div>
+                
+                <!-- Lidiya Cafe -->
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Lidiya Cafe">
+                    <div class="content">
+                        <span class="category">Cafe & Restaurant</span>
                         <h3>Lidiya Cafe</h3>
                         <p>A warm, editorial cafe website celebrating Ethiopian coffee culture, with a full menu, reviews, FAQ, and visit section.</p>
-                        <a href="#" class="work-link">Coming Soon &rarr;</a>
+                        <a href="https://lidiyacafe.xyz/" target="_blank" rel="noopener noreferrer" class="btn-card">View Live Site →</a>
+                    </div>
+                </div>
+
+                <!-- Giovanni -->
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Giovanni">
+                    <div class="content">
+                        <span class="category">Education & Consultancy</span>
+                        <h3>Giovanni</h3>
+                        <p>A professional website for Giovanni, an educational consultancy helping Ethiopian students secure fully funded scholarships, visas, and university placements abroad.</p>
+                        <a href="https://amanua11.github.io/Giovanni/" target="_blank" rel="noopener noreferrer" class="btn-card">View Live Site →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRICING -->
-    <section class="pricing-section" id="pricing">
-        <div class="section-inner">
-            <div class="web-corner-tl"></div>
-            <div class="web-corner-br"></div>
-            <span class="section-label reveal">Investment</span>
-            <h2 class="section-title reveal">Simple, Transparent Pricing</h2>
-            <p class="section-sub reveal" style="margin:0 auto 48px; text-align:center;">No hidden fees. No confusing packages. Just great websites at fair prices &mdash; contact us and we will tailor a plan for you.</p>
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <p class="section-sub">Investment</p>
+            <h2>Simple, Transparent Pricing</h2>
+            <p class="section-desc" style="margin-left: auto; margin-right: auto;">No hidden fees. No confusing packages. Just great websites at fair prices — contact us and we will tailor a plan for you.</p>
+            
             <div class="pricing-grid">
-                <div class="price-card reveal reveal-delay-1">
-                    <div>
-                        <h3>Starter Web</h3>
-                        <ul class="features-list">
-                            <li>Standard Domain Extension</li>
-                            <li>Fully Responsive Design</li>
-                            <li>Digital Menu or Service List</li>
-                            <li>Google Maps Integration</li>
-                            <li>WhatsApp Contact Button</li>
-                            <li>Basic Scroll Animations</li>
-                        </ul>
-                    </div>
-                    <a href="https://t.me/Spiderwebhst" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <h3>Starter Web</h3>
+                    <ul>
+                        <li>Standard Domain Extension</li>
+                        <li>Fully Responsive Design</li>
+                        <li>Digital Menu or Service List</li>
+                        <li>Google Maps Integration</li>
+                        <li>WhatsApp Contact Button</li>
+                        <li>Basic Scroll Animations</li>
+                    </ul>
+                    <a href="https://t.me/Spiderwebhst" target="_blank" class="btn-price">Inquire About Pricing</a>
                 </div>
-                <div class="price-card premium reveal reveal-delay-2">
-                    <div class="price-badge">Most Popular</div>
-                    <div>
-                        <h3>Premium Web</h3>
-                        <ul class="features-list">
-                            <li>Preferred Premium Domain</li>
-                            <li>Advanced Interactive Elements</li>
-                            <li>Priority Support &amp; Updates</li>
-                            <li>Full SEO Setup for Local Search</li>
-                            <li>Testimonials &amp; Review Sections</li>
-                            <li>Custom Contact Form Integration</li>
-                        </ul>
-                    </div>
-                    <a href="https://t.me/Spiderwebhst" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
+                
+                <!-- Premium -->
+                <div class="pricing-card popular">
+                    <span class="badge">Most Popular</span>
+                    <h3>Premium Web</h3>
+                    <ul>
+                        <li>Preferred Premium Domain</li>
+                        <li>Advanced Interactive Elements</li>
+                        <li>Priority Support & Updates</li>
+                        <li>Full SEO Setup for Local Search</li>
+                        <li>Testimonials & Review Sections</li>
+                        <li>Custom Contact Form Integration</li>
+                    </ul>
+                    <a href="https://t.me/Spiderwebhst" target="_blank" class="btn-price">Inquire About Pricing</a>
                 </div>
-                <div class="price-card reveal reveal-delay-3">
-                    <div>
-                        <h3>Corporate Web</h3>
-                        <ul class="features-list">
-                            <li>Multi-page Architecture</li>
-                            <li>Corporate Branding System</li>
-                            <li>Advanced Performance Tuning</li>
-                            <li>Custom Email System</li>
-                            <li>Managed Hosting &amp; Backups</li>
-                            <li>Ongoing Maintenance Plan</li>
-                        </ul>
-                    </div>
-                    <a href="https://t.me/Spiderwebhst" class="price-inquiry-link" target="_blank">Inquire About Pricing</a>
+                
+                <!-- Corporate -->
+                <div class="pricing-card">
+                    <h3>Corporate Web</h3>
+                    <ul>
+                        <li>Multi-page Architecture</li>
+                        <li>Corporate Branding System</li>
+                        <li>Advanced Performance Tuning</li>
+                        <li>Custom Email System</li>
+                        <li>Managed Hosting & Backups</li>
+                        <li>Ongoing Maintenance Plan</li>
+                    </ul>
+                    <a href="https://t.me/Spiderwebhst" target="_blank" class="btn-price">Inquire About Pricing</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHY US -->
-    <section class="why-section" id="why">
-        <div class="section-inner">
-            <span class="section-label reveal">The Difference</span>
-            <h2 class="section-title reveal">Why SpiderWeb?</h2>
-            <p class="section-sub reveal">We are not a generic agency. We are builders who understand local business in Addis Ababa.</p>
-            <div class="why-grid">
-                <div class="why-item reveal reveal-delay-1">
-                    <span class="why-icon">🕸️</span>
-                    <h4>Built for Local</h4>
+    <!-- Why Us Section -->
+    <section id="why" class="why-us">
+        <div class="container">
+            <p class="section-sub">The Difference</p>
+            <h2>Why SpiderWeb?</h2>
+            <p class="section-desc" style="margin-left: auto; margin-right: auto;">We are not a generic agency. We are builders who understand local business in Addis Ababa.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">🕸️</span>
+                    <h3>Built for Local</h3>
                     <p>We understand the Addis market, Ethiopian customers, and what makes a local business site actually convert visitors into customers.</p>
                 </div>
-                <div class="why-item reveal reveal-delay-2">
-                    <span class="why-icon">⚡</span>
-                    <h4>Fast Delivery</h4>
+                <div class="feature-card">
+                    <span class="icon">⚡</span>
+                    <h3>Fast Delivery</h3>
                     <p>Most sites are designed and deployed within 48 hours of content handoff. No waiting weeks for your business to go online.</p>
                 </div>
-                <div class="why-item reveal reveal-delay-3">
-                    <span class="why-icon">📐</span>
-                    <h4>Custom Every Time</h4>
+                <div class="feature-card">
+                    <span class="icon">📐</span>
+                    <h3>Custom Every Time</h3>
                     <p>No templates. Every site is hand-crafted to reflect your brand's personality, sector, and specific business goals.</p>
                 </div>
-                <div class="why-item reveal reveal-delay-4">
-                    <span class="why-icon">🔒</span>
-                    <h4>Ongoing Support</h4>
+                <div class="feature-card">
+                    <span class="icon">🔒</span>
+                    <h3>Ongoing Support</h3>
                     <p>We don't disappear after launch. Updates, edits, and ongoing support are always just a Telegram message away.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-        <div class="section-inner">
-            <div class="web-corner-tl"></div>
-            <div class="web-corner-br"></div>
-            <div class="contact-grid">
-                <div class="contact-info reveal">
-                    <span class="section-label">Get in Touch</span>
-                    <h2>Let's Build Your<br>Digital Presence</h2>
-                    <p>Tell us about your business and what you need. We will get back to you within 24 hours with a plan and a quote.</p>
-                    <div class="contact-detail">
-                        <span class="contact-detail-icon">✈️</span>
-                        <div class="contact-detail-text">
-                            <strong>Telegram</strong>
-                            <a href="https://t.me/Spiderwebhst" target="_blank">@Spiderwebhst</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <span class="contact-detail-icon">🌐</span>
-                        <div class="contact-detail-text">
-                            <strong>Website</strong>
-                            <a href="https://spiderweb.lol/" target="_blank">spiderweb.lol</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <span class="contact-detail-icon">📍</span>
-                        <div class="contact-detail-text">
-                            <strong>Based in</strong>
-                            <span style="color:var(--text-muted)">Addis Ababa, Ethiopia</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="reveal reveal-delay-2">
-                    <form class="contact-form" action="https://formspree.io/f/mpqezdrl" method="POST">
-                        <input type="text" name="customer_name" placeholder="Your Name" required>
-                        <input type="email" name="customer_email" placeholder="Your Email" required>
-                        <select name="service_type">
-                            <option value="">What do you need?</option>
-                            <option>Starter Website</option>
-                            <option>Premium Website</option>
-                            <option>Corporate Website</option>
-                            <option>Website Improvements</option>
-                            <option>Not Sure Yet</option>
-                        </select>
-                        <textarea rows="5" name="customer_message" placeholder="Tell us about your business..." required></textarea>
-                        <button type="submit">Send Message &rarr;</button>
-                    </form>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container" style="display: flex; gap: 60px; flex-wrap: wrap; align-items: flex-start;">
+            <div class="contact-info">
+                <h2>Let's Build Your<br>Digital Presence</h2>
+                <p>Tell us about your business and what you need. We will get back to you within 24 hours with a plan and a quote.</p>
+                <div class="contact-details">
+                    <p>✈️ Telegram <a href="https://t.me/Spiderwebhst" target="_blank">@Spiderwebhst</a></p>
+                    <p>🌐 Website <a href="https://spiderweb.lol/" target="_blank">spiderweb.lol</a></p>
+                    <p>📍 Based in <strong style="color: var(--text-main);">Addis Ababa, Ethiopia</strong></p>
                 </div>
             </div>
+            <form class="contact-form" action="https://t.me/Spiderwebhst" method="GET" target="_blank">
+                <h3>What do you need?</h3>
+                <div class="radio-group">
+                    <label><input type="radio" name="service" value="Starter Website" checked> Starter Website</label>
+                    <label><input type="radio" name="service" value="Premium Website"> Premium Website</label>
+                    <label><input type="radio" name="service" value="Corporate Website"> Corporate Website</label>
+                    <label><input type="radio" name="service" value="Website Improvements"> Website Improvements</label>
+                    <label><input type="radio" name="service" value="Not Sure Yet"> Not Sure Yet</label>
+                </div>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="message" placeholder="Tell us about your project..." required>
+                <button type="submit" class="btn-submit">Send Message via Telegram →</button>
+            </form>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <a href="#" class="logo" style="display:inline-flex; margin-bottom:10px;">
-                    <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M63 36 C58 27, 42 27, 37 36 C31 46, 69 54, 63 64 C58 73, 42 73, 37 64" stroke="#bb1e25" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <ellipse cx="50" cy="50" rx="45" ry="16" stroke="#bb1e25" stroke-width="5" transform="rotate(-6 50 50)"/>
-                    </svg>
-                    <span class="brand-spider">Spider</span><span class="brand-web">Web</span>
-                </a>
-                <p>Premium websites for local businesses, cafes, restaurants, boutiques, and corporates &mdash; hand-built in Addis Ababa.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Spider<span>Web</span></a>
+                    <p>Premium websites for local businesses, cafes, restaurants, boutiques, and corporates — hand-built in Addis Ababa.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Our Work</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#why">Why Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://t.me/Spiderwebhst" target="_blank">Telegram: @Spiderwebhst</a></li>
+                        <li><a href="#contact">Send a Message</a></li>
+                        <li><a href="https://spiderweb.lol/" target="_blank">spiderweb.lol</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h5>Navigate</h5>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#work">Our Work</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#why">Why Us</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>© 2026 SpiderWeb. All rights reserved. Built with 🕸️ in Addis Ababa</p>
             </div>
-            <div class="footer-col">
-                <h5>Contact</h5>
-                <ul>
-                    <li><a href="https://t.me/Spiderwebhst" target="_blank">Telegram: @Spiderwebhst</a></li>
-                    <li><a href="#contact">Send a Message</a></li>
-                    <li><a href="https://spiderweb.lol/" target="_blank">spiderweb.lol</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 SpiderWeb. All rights reserved.</p>
-            <p>Built with 🕸️ in Addis Ababa</p>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("active"); });
-            }, { threshold: 0.06, rootMargin: "0px 0px -10px 0px" });
-            document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-        });
-
-        document.getElementById('hamburger').addEventListener('click', () => {
-            document.getElementById('nav-links').classList.toggle('open');
-        });
-        document.querySelectorAll('.nav-links a').forEach(a => {
-            a.addEventListener('click', () => document.getElementById('nav-links').classList.remove('open'));
-        });
-    </script>
 </body>
 </html>
